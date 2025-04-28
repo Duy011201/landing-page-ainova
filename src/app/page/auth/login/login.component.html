@@ -1,0 +1,39 @@
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+<section [formGroup]="form" class="custom-login bg-login">
+  <div class="w-full h-screen flex justify-content-center align-items-center">
+    <div class="flex flex-column align-items-center gap-3 wrap-card">
+      <h1 class="text-md">Đăng nhập tài khoản</h1>
+      <p class="text-md mb-3 mt-1">
+        Bạn chưa có tài khoản ?
+        <span class="text-link cursor-pointer underline hover:no-underline" (click)="goToPage(SETTING.SYSTEM_PAGE.RELATED_AUTH + '/' + SETTING.SYSTEM_PAGE.RELATED_REGISTER)">
+          Đăng ký tại đây</span>
+      </p>
+
+      <div>
+        <p-floatlabel variant="on">
+          <label for="email">Email</label>
+          <input pInputText id="email" formControlName="email" autocomplete="off" class="w-25rem"/>
+        </p-floatlabel>
+        <small *ngIf="isControlInvalid('email')" class="text-error text-left">
+          {{ getErrorMessage('email') }}
+        </small>
+      </div>
+
+      <div>
+        <p-floatlabel variant="on">
+          <label for="password">Mật khẩu</label>
+          <input pInputText id="password" formControlName="password" autocomplete="off" type="password" class="w-25rem"/>
+        </p-floatlabel>
+        <small *ngIf="isControlInvalid('password')" class="text-error text-left">
+          {{ getErrorMessage('password') }}
+        </small>
+      </div>
+
+      <div class="flex flex-column justify-content-between gap-2 w-25rem">
+        <p-button icon="fa-brands fa-google" label="Google" (click)="onLogin()"/>
+        <p-button label="Đăng nhập" (click)="onLogin()"/>
+      </div>
+    </div>
+  </div>
+</section>
