@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "micro-app": {
+    "ainova-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "micro-app",
+      "prefix": "ainova-app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/micro-app",
+            "outputPath": "dist/ainova-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -40,7 +40,9 @@
               "src/assets/font-awesome/css/all.min.css",
               "src/assets/font-awesome/css/fontawesome6.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -70,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "micro-app:build:production"
+              "buildTarget": "ainova-app:build:production"
             },
             "development": {
-              "buildTarget": "micro-app:build:development"
+              "buildTarget": "ainova-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,7 +107,9 @@
               "src/assets/font-awesome/css/all.min.css",
               "src/assets/font-awesome/css/fontawesome6.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         }
       }

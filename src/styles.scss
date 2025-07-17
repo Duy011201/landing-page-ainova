@@ -3,18 +3,95 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-
-  --color-blue-sky: #2f80ed;
-  --color-blue-red: #e24256;
-
-  --z-index-loading-overlay: 1000;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
 }
 
-.text-link {
-  color: var(--color-blue-sky);
+:root {
+  --height-header: 82px;
+  --app-shadows-btn: 0 12px 20px 6px rgb(104 112 118 / 0.08);
+  --app-fonts-sans: 'Lexend', 'Lexend Fallback';
+
+  --light-color-app: #fff;
+  --dark-color-app: #000;
+  --blue-color-app: #0058B0;
+  --text-color-app: #0058B0;
+  --yellow-color-app: #ffce32;
+  --border-color-app: #efefef;
+
+  --title-color-app: #101010;
+  --content-color-app: #555555;
+
+  --ripple-color: rgba(255, 255, 255, 0.5);
+  --ripple-duration: 0.7s;
+  --ripple-scale-factor: 2.5;
 }
 
-.text-error {
-  color: var(--color-blue-red);
+::-webkit-scrollbar {
+  height: 6px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.66);
+  border-radius: 5px;
+}
+
+.text-app {
+  color: var(--text-color-app)
+}
+
+.app-title {
+  color: var(--title-color-app);
+}
+
+.app-content {
+  color: var(--content-color-app);
+}
+
+.app-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--blue-color-app) 0%, var(--yellow-color-app) 100%);
+  color: var(--light-color-app);
+  border: none;
+  border-radius: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  width: 180px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--ripple-color);
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+  animation: ripple-animation var(--ripple-duration) linear forwards;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(var(--ripple-scale-factor));
+    opacity: 0;
+  }
 }

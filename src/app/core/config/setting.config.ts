@@ -8,8 +8,8 @@ export const SETTING = {
     RELATED_LOGIN: 'login',
     RELATED_REGISTER: 'register',
     RELATED_HOME: 'home',
+    RELATED_CONTACT: 'contact',
     RELATED_ROOT: '',
-    RELATED_MANAGER_USER: 'manager-user',
   },
   MSG: {
     ERROR: 'Có lỗi xảy ra!',

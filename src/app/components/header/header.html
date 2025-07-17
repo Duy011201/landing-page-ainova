@@ -1,0 +1,41 @@
+<header>
+  <div class="header__card">
+    <div class="lg:px-8 px-3 flex align-items-center justify-content-between">
+      <img class="header__card--logo" src="assets/image/logo_ainova.png" alt="AINOVA Logo" />
+      @if (!isMobile) {
+        <div class="flex lg:gap-5 gap-3">
+          <span class="header__card--item cursor-pointer text-lg" routerLink="/home">Giới thiệu</span>
+<!--          <span class="header__card&#45;&#45;item cursor-pointer text-lg">Sản phẩm</span>-->
+          <span class="header__card--item cursor-pointer text-lg" routerLink="/contact">Liên hệ với chúng tôi</span>
+        </div>
+        <div class="flex align-items-center lg:gap-5 gap-3">
+          <span class="app-btn text-lg" (click)="onRippleButtonClick($event)" routerLink="/contact">Đăng ký ngay</span>
+        </div>
+      } @else {
+        <p-sidebar [(visible)]="sidebarVisible" position="right" showCloseIcon="false">
+          <div class="flex justify-content-between align-items-center">
+            <div class="flex align-items-center">
+              <i class="pi pi-apple text-xl mr-2"></i>
+              <span class="font-semibold">AINOVA</span>
+            </div>
+            <i class="fa-solid fa-xmark cursor-pointer" (click)="sidebarVisible = false"></i>
+          </div>
+
+            <div class="header__card--mobile mt-3">
+              <div class="flex align-items-center justify-content-start h-4rem border-bottom-1 cursor-pointer"
+                   style="border-bottom-color: var(--border-color-app)"
+                   *ngFor="let item of fullMenu">
+              <span [routerLink]="item.routerLink">
+                <i [ngClass]="item.icon"></i> <span class="ml-3">{{ item.label }}</span>
+              </span>
+              </div>
+            </div>
+            <div class="flex justify-content-center align-items-center mt-5">
+              <span class="app-content" style="font-size: 10px">VIET NAM AINOVA GROUP JOINT STOСК COMPANY © 2025 All Rights Reserved</span>
+            </div>
+        </p-sidebar>
+      }
+      <i *ngIf="isMobile" (click)="toggleSidebar()" class="fa-solid fa-bars text-2xl"></i>
+    </div>
+  </div>
+</header>

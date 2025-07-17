@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 import { SETTING } from '@app/core/config/setting.config';
 import { HomeComponent } from '@app/page/home/home.component';
 import { NotFoundComponent } from '@app/core/component/not-found/not-found.component';
+import { ContactComponent } from '@app/page/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -13,6 +13,11 @@ export const routes: Routes = [
   {
     path: SETTING.SYSTEM_PAGE.RELATED_HOME,
     component: HomeComponent,
+    data: { showHeader: true, showFooter: true },
+  },
+  {
+    path: SETTING.SYSTEM_PAGE.RELATED_CONTACT,
+    component: ContactComponent,
     data: { showHeader: true, showFooter: true },
   },
   {
@@ -27,7 +32,7 @@ export const routes: Routes = [
   },
   {
     path: SETTING.SYSTEM_PAGE.RELATED_NOT_FOUND,
-    component: NotFoundComponent,
+    component: HomeComponent,
     data: { showHeader: true, showFooter: true },
   },
 ];

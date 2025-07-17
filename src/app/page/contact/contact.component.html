@@ -1,149 +1,38 @@
 <section>
-  <div class="home__card">
-    <div class="home__card--banner">
-      <div class="banner-before"></div>
-      <div class="banner-after"></div>
-      <div class="">
-        <h1 class="banner-title text-4xl">Tiên phong công nghệ - Kiến tạo giá trị</h1>
+  <div class="contact__card">
+    <div class="lg:px-8 px-3 mt-7 grid">
+      <div class="md:col-5 col-12 p-3">
+        <p class="font-bold text-xl mb-3">CÔNG TY CỔ PHẦN TẬP ĐOÀN AINOVA VIỆT NAM</p>
+        <p class="mb-2"><i class="fa-solid fa-location-dot"></i> Địa chỉ trụ sở chính: Số 2 NV9, khu đô thị Tổng cục 5 Bộ Công An, Phường Thanh Liệt, thành phố Hà Nội, Việt Nam.</p>
+        <p class="mb-2"><i class="fa-solid fa-phone"></i> Điện thoại: 0867 168 189</p>
+        <p class="mb-2"><i class="fa-solid fa-envelope"></i> Email: ainovavietnam&#64;gmail.com</p>
+
+        <div class="my-3 border-top-1 opacity-30" style="color: var(--border-color-app)"></div>
+        <p class="text-xl font-bold">LIÊN HỆ VỚI CHÚNG TÔI</p>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="grid w-full mt-3">
+          <div class="lg:col-4 col-12">
+            <input class="w-full" required pInputText type="text" id="username" placeholder="Họ tên" formControlName="username" />
+          </div>
+          <div class="lg:col-4 col-12">
+            <input class="w-full" required pInputText type="email" id="email" placeholder="Email" formControlName="email" />
+          </div>
+          <div class="lg:col-4 col-12">
+            <input class="w-full" required pInputText type="text" id="phone" placeholder="Số điện thoại" formControlName="phone" />
+          </div>
+          <div class="col-12">
+            <textarea pInputText required id="content" formControlName="content" rows="5" cols="30" style="resize: none" placeholder="Nội dung" class="w-full"></textarea>
+          </div>
+          <button class="w-full home__card--title" pButton severity="secondary" type="submit">
+            <span class="text-xl">Gửi liên hệ của bạn</span>
+          </button>
+        </form>
       </div>
-    </div>
-
-    <div class="flex justify-content-center align-items-center text-3xl p-3 font-bold text-app">
-      Giải pháp toàn diện
-    </div>
-
-    <div class="home__card--solution">
-      <div class="lg:px-8 px-3 flex md:flex-row flex-column align-items-center justify-content-center mt-6 lg:gap-7 gap-3">
-        <div class="item">
-          <img src="./assets/image/logo-home-mkt.png" alt="logo">
-          <span>Marketing</span>
-        </div>
-        <div class="item">
-          <img src="./assets/image/logo-home-palbox.png" alt="logo">
-          <span>Palbox</span>
-        </div>
-        <div class="item">
-          <img src="./assets/image/logo-home-sale.png" alt="logo">
-          <span>Sale</span>
-        </div>
-        <div class="item">
-          <img src="./assets/image/logo-home-vd.png" alt="logo">
-          <span>Vận đơn</span>
-        </div>
-        <div class="item">
-          <img src="./assets/image/logo-home-kt.png" alt="logo">
-          <span>Kế toán</span>
-        </div>
-        <div class="item">
-          <img src="./assets/image/logo-home-store.png" alt="logo">
-          <span>Kho</span>
-        </div>
-        <div class="item">
-          <img src="./assets/image/logo-home-palion-crm.png" alt="logo">
-          <span>Palion CRM</span>
-        </div>
+      <div class="md:col-7 col-12 p-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29804.00262183656!2d105.7584611760993!3d20.972572144998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acdbd0727607%3A0x450c42b101aaec9f!2zVOG7lW5nIEPhu6VjIDUsIFTDom4gVHJp4buBdSwgVGhhbmggVHLDrCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1752596536882!5m2!1svi!2s"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-    </div>
-
-    <div class="flex justify-content-center align-items-center text-3xl p-3 font-bold text-app mt-6">
-      Đây Có Phải Những Vấn Đề Bạn Thường Xuyên Gặp Phải?
-    </div>
-
-    <div class="home__card--question mt-6">
-      <div class="lg:px-8 px-3 grid">
-        <div class="md:col-3 col-12 p-4 flex flex-column align-items-center gap-3 item">
-          <div><img src="./assets/image/logo-home-clock.webp" alt="logo"></div>
-          <div class="app-title font-bold text-center text-xl">Bỏ lỡ cơ hội tiếp cận khách hàng</div>
-          <div class="app-content">Lượng khách hàng quá lớn nên nhân viên không kịp phản hồi. Khách hàng liên hệ ngoài giờ hành chính nên không có người tiếp</div>
-        </div>
-        <div class="md:col-3 col-12 p-4 flex flex-column align-items-center gap-3 item">
-          <div><img src="./assets/image/logo-home-chat-messager.webp" alt="logo"></div>
-          <div class="app-title font-bold text-center text-xl">Thiếu nhất quán trong thông tin tư vấn</div>
-          <div class="app-content">Nhân viên đưa ra những thông tin khác nhau trong quá trình tư vấn, làm giảm niềm tin của khách hàng.</div>
-        </div>
-        <div class="md:col-3 col-12 p-4 flex flex-column align-items-center gap-3 item">
-          <div><img src="./assets/image/logo-home-question.webp" alt="logo"></div>
-          <div class="app-title font-bold text-center text-xl">Rào cản ngôn ngữ khi tiếp cận khách quốc tế</div>
-          <div class="app-content">Nhân viên không đáp ứng được yêu cầu ngoại ngữ, cản trở doanh nghiệp mở rộng thị trường quốc tế.</div>
-        </div>
-        <div class="md:col-3 col-12 p-4 flex flex-column align-items-center gap-3 item">
-          <div><img src="./assets/image/logo-home-group.webp" alt="logo"></div>
-          <div class="app-title font-bold text-center text-xl">Khó khăn khi mở rộng đội ngũ nhân lực</div>
-          <div class="app-content">Việc mở rộng quy mô nhân sự luôn gây tốn kém thời gian và chi phí, tiềm ẩn nhiều rủi ro về chất lượng nhân viên.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="home__card--prioritize mt-6">
-      <div class="grid lg:px-8 lg:mx-3 px-3">
-        <div class="col-12 text-center text-3xl font-bold py-2 text-app">Ưu điểm của sản phẩm AINOVA</div>
-        <div class="md:col-6 col-12 text-xl flex align-items-center line-height-4">
-          Sản phẩm được thiết kế để giúp doanh nghiệp có thể nhanh chóng bắt đầu ứng dụng công nghệ vào hoạt động kinh doanh của doanh nghiệp mình mà không cần phải đầu tư nhiều về thời gian
-          và chi phí.
-        </div>
-        <div class="md:col-6 col-12 flex align-items-center justify-content-center">
-          <img height="550" width="400" src="./assets/image/logo-home-human.webp" alt="logo">
-        </div>
-      </div>
-
-      <div class="lg:px-8 px-3 py-3 grid">
-        <div class="md:col-4 col-12 flex gap-3 mt-3 p-4 item">
-          <div><img src="./assets/image/logo-home-24-7.webp" alt="logo"></div>
-          <div class="flex flex-column gap-2">
-            <span class="font-bold text-xl app-title">Hoạt động 24/7</span>
-            <span class="app-content">Hoạt động mọi thời gian, không nghỉ phép, không chậm trễ. Đảm bảo công việc diễn ra liên tục</span>
-          </div>
-        </div>
-        <div class="md:col-4 col-12 flex gap-3 mt-3 p-4 item">
-          <div><img src="./assets/image/logo-home-find-growth.webp" alt="logo"></div>
-          <div class="flex flex-column gap-2">
-            <span class="font-bold text-xl app-title">Truy xuất thông minh</span>
-            <span class="app-content">Tự động truy xuất, lọc và tổng hợp thông tin thông minh, nhanh chóng và chính xác từ dữ liệu thô.</span>
-          </div>
-        </div>
-        <div class="md:col-4 col-12 flex gap-3 mt-3 p-4 item">
-          <div><img src="./assets/image/logo-home-find-check.webp" alt="logo"></div>
-          <div class="flex flex-column gap-2">
-            <span class="font-bold text-xl app-title">Bảo mật tuyệt đối</span>
-            <span class="app-content">Các thông tin được cung cấp bởi doanh nghiệp là tuyệt đối an toàn.</span>
-          </div>
-        </div>
-        <div class="md:col-4 col-12 flex gap-3 mt-3 p-4 item">
-          <div><img src="./assets/image/logo-home-setting.webp" alt="logo"></div>
-          <div class="flex flex-column gap-2">
-            <span class="font-bold text-xl app-title">Tích hợp đa nền tảng</span>
-            <span class="app-content">Từng gói giải pháp sẽ được tích hợp với các nền tảng phù hợp như Zalo, Website, Mess, Google tài liệu, CRM...</span>
-          </div>
-        </div>
-        <div class="md:col-4 col-12 flex gap-3 mt-3 p-4 item">
-          <div><img src="./assets/image/logo-home-many-lang.webp" alt="logo"></div>
-          <div class="flex flex-column gap-2">
-            <span class="font-bold text-xl app-title">Hỗ trợ đa ngôn ngữ</span>
-            <span class="app-content">Không giới hạn ngôn ngữ sử dụng, phá vỡ rào cản ngôn ngữ với khách quốc tế.</span>
-          </div>
-        </div>
-        <div class="md:col-4 col-12 flex gap-3 mt-3 p-4 item">
-          <div><img src="./assets/image/logo-home-rocket.webp" alt="logo"></div>
-          <div class="flex flex-column gap-2">
-            <span class="font-bold text-xl app-title">Triển khai nhanh gọn</span>
-            <span class="app-content">Chỉ với vài thao tác đơn giản, bạn đã có thể sử dụng sản phẩm AINOVA cho doanh nghiệp của bạn,
-              không cần thực hiện bất cứ thao tác phức tạp nào.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex justify-content-center align-items-center text-3xl p-3 mt-6 font-bold text-app">
-      Đối tác tiêu biểu
-    </div>
-
-    <div class="home__card--partner lg:px-8 px-3 py-3 flex flex-wrap justify-content-center align-items-center gap-3 mt-5">
-      <div class="item"><img src="./assets/image/logo-home-palvietnam.png" alt="logo"></div>
-      <div class="item"><img src="./assets/image/logo-home-palvietnam.png" alt="logo"></div>
-      <div class="item"><img src="./assets/image/logo-home-palvietnam.png" alt="logo"></div>
-      <div class="item"><img src="./assets/image/logo-home-palvietnam.png" alt="logo"></div>
-      <div class="item"><img src="./assets/image/logo-home-palvietnam.png" alt="logo"></div>
-      <div class="item"><img src="./assets/image/logo-home-palvietnam.png" alt="logo"></div>
     </div>
   </div>
 </section>

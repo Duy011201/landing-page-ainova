@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRouteSnapshot, ActivationEnd, Router, RouterOutlet } from '@angular/router';
-import { FooterComponent } from '@app/core/component/footer/footer.component';
-import { HeaderComponent } from '@app/core/component/header/header.component';
 import { filter, map } from 'rxjs';
 import { LoadingComponent } from '@app/core/component/loading/loading.component';
 import { CommonModule } from '@angular/common';
 import { PrimeNG } from 'primeng/config';
+import { FooterComponent } from '@app/components/footer/footer';
+import { HeaderComponent } from '@app/components/header/header';
 
 @Component({
   selector: 'app-root',

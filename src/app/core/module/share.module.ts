@@ -8,6 +8,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingService } from '@app/core/service/loading.service';
 import { PrimeNGModule } from '@app/core/module/prime.module';
+import { AppService } from '@app/app.service';
 
 @NgModule({
   declarations: [],
@@ -29,7 +30,7 @@ import { PrimeNGModule } from '@app/core/module/prime.module';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [ConfirmationService, MessageService, LoadingService],
+  providers: [ConfirmationService, MessageService, LoadingService, AppService],
 })
 export class SharedModule {
   constructor() {}
