@@ -38,35 +38,35 @@
 
     .avatar:nth-of-type(1) {
       top: 100px;
-      left: 340px;
+      left: 300px;
       animation-name: slide-in-left;
       animation-delay: 0.1s;
     }
 
     .avatar:nth-of-type(2) {
       top: 100px;
-      right: 440px;
+      right: 350px;
       animation-name: slide-in-right;
       animation-delay: 0.3s;
     }
 
     .avatar:nth-of-type(3) {
       top: 230px;
-      left: 300px;
+      left: 280px;
       animation-name: slide-in-left;
       animation-delay: 0.5s;
     }
 
     .avatar:nth-of-type(4) {
       top: 270px;
-      right: 400px;
+      right: 360px;
       animation-name: slide-in-right;
       animation-delay: 0.1s;
     }
 
     .avatar:nth-of-type(5) {
       top: 390px;
-      left: 420px;
+      left: 400px;
       animation-name: slide-in-left;
       animation-delay: 0.3s;
     }
@@ -286,6 +286,77 @@
       color: transparent;
     }
   }
+
+  &--orbit {
+    background-image: linear-gradient(180deg, #fff, #fff3e6 19%, #fff3e6 67%, #fff3e6 78%, #fff);
+
+    .orbit-wrapper {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 50px auto;
+      border-radius: 50%;
+      //background-image: linear-gradient(180deg, #fff, #fff3e6 19%, #fff3e6 67%, #fff3e6 78%, #fff);
+    }
+
+    .center-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate linear infinite;
+    }
+
+    .orbit1 {
+      width: 120px;
+      height: 120px;
+      animation-duration: 8s;
+    }
+
+    .orbit2 {
+      width: 200px;
+      height: 200px;
+      animation-duration: 12s;
+      animation-direction: reverse;
+    }
+
+    .orbit3 {
+      width: 280px;
+      height: 280px;
+      animation-duration: 16s;
+    }
+
+    .orbit4 {
+      width: 360px;
+      height: 360px;
+      animation-duration: 20s;
+      animation-direction: reverse;
+    }
+
+    .orbit5 {
+      width: 440px;
+      height: 440px;
+      animation-duration: 24s;
+    }
+
+    .icon {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+    }
+  }
 }
 
 @media (max-width: 1400px) {
@@ -293,34 +364,34 @@
     height: 1250px;
   }
 
-  .home__card--banner {
+  .home__card--center {
     .avatar:nth-of-type(1) {
-      top: 100px; left: 140px;
+      top: 100px; left: 100px;
     }
 
     .avatar:nth-of-type(2) {
-      top: 100px; right: 140px;
+      top: 100px; right: 100px;
     }
 
     .avatar:nth-of-type(3) {
-      top: 230px; left: 230px;
+      top: 230px; left: 200px;
     }
 
     .avatar:nth-of-type(4) {
-      top: 270px; right: 200px;
+      top: 270px; right: 120px;
     }
 
     .avatar:nth-of-type(5) {
-      top: 390px; left: 220px;
+      top: 390px; left: 180px;
     }
 
     .avatar:nth-of-type(6) {
-      top: 390px; right: 250px;
+      top: 390px; right: 200px;
     }
   }
 }
 
-@media (max-width: 120px) {
+@media (max-width: 1200px) {
   .home__card--banner {
     .avatar:nth-of-type(1) {
       top: 100px; left: 40px;

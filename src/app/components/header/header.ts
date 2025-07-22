@@ -12,8 +12,12 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   isMobile: boolean = false;
   sidebarVisible = false;
+
   menuItems = [
-    { label: 'Trang chủ', icon: 'fa-solid fa-house', routerLink: '/home' },
+    { label: 'Về chúng tôi', icon: 'fa-solid fa-house', routerLink: '/home' },
+    { label: 'Sản phẩm', icon: 'fa-solid fa-gear', routerLink: '/home' },
+    { label: 'Giải pháp', icon: 'fa-solid fa-house', routerLink: '/solution' },
+    { label: 'Bảng giá', icon: 'fa-solid fa-table', routerLink: '/home' },
     { label: 'Liên hệ', icon: 'fa-solid fa-paper-plane', routerLink: '/contact' }
   ];
 

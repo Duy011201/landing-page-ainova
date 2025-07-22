@@ -1,0 +1,43 @@
+.contact__card {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  &--item {
+    width: 350px;
+    bottom: 85px;
+    right: 0;
+  }
+
+  .arrow-down {
+    position: absolute;
+    bottom: 75px;
+    right: 50px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--blue-color-app);
+  }
+}
+
+.app-btn {
+  animation: pulse-shadow 2s infinite;
+  transition: box-shadow 0.3s ease;
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}

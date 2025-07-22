@@ -26,8 +26,7 @@
       } @else {
         <p-sidebar [(visible)]="sidebarVisible" position="right" showCloseIcon="false">
           <div class="flex justify-content-between align-items-center">
-            <div class="flex align-items-center">
-              <i class="pi pi-apple text-xl mr-2"></i>
+            <div class="flex justify-content-start align-items-center">
               <span class="font-semibold">AINOVA</span>
             </div>
             <i class="fa-solid fa-xmark cursor-pointer" (click)="sidebarVisible = false"></i>
@@ -42,8 +41,12 @@
               </span>
               </div>
             </div>
-            <div class="flex justify-content-center align-items-center mt-5">
-              <span class="app-content" style="font-size: 10px">VIET NAM AINOVA GROUP JOINT STOСК COMPANY © 2025 All Rights Reserved</span>
+            <div class="flex justify-content-start align-items-center mt-5">
+              <span class="app-content" style="font-size: 10px">
+                VIET NAM AINOVA GROUP JOINT STOСК COMPANY
+                <br>
+                © 2025 All Rights Reserved
+              </span>
             </div>
         </p-sidebar>
       }

@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { PrimeNG } from 'primeng/config';
 import { FooterComponent } from '@app/components/footer/footer';
 import { HeaderComponent } from '@app/components/header/header';
+import { ButtonContactComponent } from '@app/components/button-contact/button-contact';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, CommonModule, FooterComponent, LoadingComponent],
+  imports: [RouterOutlet, HeaderComponent, CommonModule, FooterComponent, LoadingComponent, ButtonContactComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
