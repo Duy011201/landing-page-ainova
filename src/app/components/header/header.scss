@@ -1,3 +1,49 @@
+.header__top {
+  position: relative;
+  background-size: 100% 100%;
+  font-family: Inter, sans-serif;
+  height: 30px;
+  color: var(--dark-color-app);
+  border-bottom: 1px solid var(--border-color-app);
+  //background: linear-gradient(180deg, #002b33, rgba(0, 43, 51, .25)), linear-gradient(90deg, var(--blue-color-app) 21.86%, var(--yellow-color-app) 78.13%);
+
+  .banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-before {
+    background: url("/assets/image/banner_before_bg.png");
+    background-size: calc(100% + 23px);
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 317px;
+    z-index: 0;
+  }
+
+  .banner-after {
+    background: url("/assets/image/banner_after_bg.png");
+    background-repeat: no-repeat;
+    background-size: calc(100% - 100px);
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 317px;
+    z-index: 0;
+  }
+}
+
 .header__card {
   max-height: var(--height-header);
   min-height: var(--height-header);

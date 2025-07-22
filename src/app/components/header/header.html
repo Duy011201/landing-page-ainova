@@ -1,15 +1,27 @@
 <header>
+<!--  <div class="header__top">-->
+<!--    <div class="banner-before"></div>-->
+<!--    <div class="banner-after"></div>-->
+<!--    <div class="h-full">-->
+<!--      <div class="banner-title flex gap-5 align-items-center justify-content-center">-->
+<!--        <div><i class="fa-solid fa-phone"></i> Điện thoại: 0867 168 189</div>-->
+<!--        <div><i class="fa-solid fa-envelope"></i> Email: ainovavietnam&#64;gmail.com</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
   <div class="header__card">
     <div class="lg:px-8 px-3 flex align-items-center justify-content-between">
       <img class="header__card--logo" src="assets/image/logo_ainova.png" alt="AINOVA Logo" />
       @if (!isMobile) {
-        <div class="flex lg:gap-5 gap-3">
-          <span class="header__card--item cursor-pointer text-lg" routerLink="/home">Giới thiệu</span>
-<!--          <span class="header__card&#45;&#45;item cursor-pointer text-lg">Sản phẩm</span>-->
-          <span class="header__card--item cursor-pointer text-lg" routerLink="/contact">Liên hệ với chúng tôi</span>
+        <div class="flex lg:gap-5 gap-5">
+          <span class="header__card--item cursor-pointer text-lg" routerLink="/home">Về chúng tôi</span>
+          <span class="header__card--item cursor-pointer text-lg">Sản phẩm</span>
+          <span class="header__card--item cursor-pointer text-lg" routerLink="/solution">Giải pháp</span>
+          <span class="header__card--item cursor-pointer text-lg">Bảng giá</span>
+          <span class="header__card--item cursor-pointer text-lg" routerLink="/contact">Liên hệ</span>
         </div>
         <div class="flex align-items-center lg:gap-5 gap-3">
-          <span class="app-btn text-lg" (click)="onRippleButtonClick($event)" routerLink="/contact">Đăng ký ngay</span>
+          <span class="app-btn text-lg px-4" (click)="onRippleButtonClick($event)" routerLink="/contact">Đăng ký ngay</span>
         </div>
       } @else {
         <p-sidebar [(visible)]="sidebarVisible" position="right" showCloseIcon="false">

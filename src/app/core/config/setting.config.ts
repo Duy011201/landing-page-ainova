@@ -8,6 +8,7 @@ export const SETTING = {
     RELATED_LOGIN: 'login',
     RELATED_REGISTER: 'register',
     RELATED_HOME: 'home',
+    RELATED_SOLUTION: 'solution',
     RELATED_CONTACT: 'contact',
     RELATED_ROOT: '',
   },

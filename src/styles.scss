@@ -18,10 +18,13 @@
   --blue-color-app: #0058B0;
   --text-color-app: #0058B0;
   --yellow-color-app: #ffce32;
+  --green-color-app: #00ca68;
   --border-color-app: #efefef;
+  --background-button-app: #f4f4f4;
 
   --title-color-app: #101010;
   --content-color-app: #555555;
+  --background-color-app: rgba(0, 0, 0, .7);
 
   --ripple-color: rgba(255, 255, 255, 0.5);
   --ripple-duration: 0.7s;
@@ -57,7 +60,8 @@
 .app-btn {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, var(--blue-color-app) 0%, var(--yellow-color-app) 100%);
+  background-color: var(--blue-color-app);
+  //background: linear-gradient(90deg, var(--blue-color-app) 0%, var(--yellow-color-app) 100%);
   color: var(--light-color-app);
   border: none;
   border-radius: 32px;
@@ -65,7 +69,6 @@
   cursor: pointer;
   outline: none;
   height: 40px;
-  width: 180px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: "Inter", sans-serif;
@@ -93,5 +96,85 @@
   to {
     transform: scale(var(--ripple-scale-factor));
     opacity: 0;
+  }
+}
+
+.reveal-text {
+  display: inline-block;
+  animation: reveal-text 1.5s ease-out forwards;
+}
+
+@keyframes reveal-text {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes title-animated {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slide-up-fade-in {
+  animation: slide-up-fade-in 1s ease-out forwards;
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
