@@ -49,6 +49,8 @@
   min-height: var(--height-header);
   box-shadow: 0 12px 20px 6px rgba(104, 112, 118, 0.08);
   transition: box-shadow 0.15s linear, background-color 0.3s;
+  background-color: var(--blue-color-app);
+  color: var(--light-color-app);
 
   &--logo {
     object-fit: contain;
@@ -60,12 +62,6 @@
   &--item {
     &:hover {
       scale: 1.1;
-      background: linear-gradient(180deg, #002b33, rgba(0, 43, 51, .25)), linear-gradient(90deg, var(--blue-color-app) 21.86%, var(--yellow-color-app) 78.13%);
-      display: inline-block;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
     }
   }
 

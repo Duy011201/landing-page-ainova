@@ -4,6 +4,7 @@ import { HomeComponent } from '@app/page/home/home.component';
 import { NotFoundComponent } from '@app/core/component/not-found/not-found.component';
 import { ContactComponent } from '@app/page/contact/contact.component';
 import { SolutionComponent } from '@app/page/solution/solution';
+import { TablePriceComponent } from '@app/page/table-price/table-price';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,11 @@ export const routes: Routes = [
   {
     path: SETTING.SYSTEM_PAGE.RELATED_SOLUTION,
     component: SolutionComponent,
+    data: { showHeader: true, showFooter: true },
+  },
+  {
+    path: SETTING.SYSTEM_PAGE.RELATED_TABLE_PRICE,
+    component: TablePriceComponent,
     data: { showHeader: true, showFooter: true },
   },
   {

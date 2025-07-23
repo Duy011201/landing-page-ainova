@@ -1,4 +1,6 @@
-.home__card {
+.contact__card {
+  background: linear-gradient(180deg, var(--sky-color-app) 0%, var(--light-color-app) 100%);
+
   &--title {
     color: var(--light-color-app);
     background: var(--blue-color-app);

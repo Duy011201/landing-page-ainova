@@ -1,0 +1,257 @@
+<div class="table-price__card">
+  <div class="table-price__card--select flex flex-column align-items-center justify-content-center gap-3">
+    <div class="text-5xl font-bold">Bảng giá dịch vụ AINOVA</div>
+    <p *ngIf="isSelect">Sở hữu phần mềm chuyên dụng bán hàng online với mức phí hợp lí cho mọi quy mô.</p>
+    <p *ngIf="!isSelect">Sở hữu AI Agent chuyên dụng với mức phí hợp lí cho mọi quy mô.</p>
+  </div>
+
+  <div class="lg:px-8 px-3">
+    <div class="cursor-pointer flex justify-content-center align-items-center">
+      <span class="custom-button-container" (click)="onChangeSelect()">
+        <span [ngClass]="{ 'ai-agent-button': isSelect, 'px-4 py-3' : true }" class="font-bold text-xl">Phần mềm</span>
+        <span [ngClass]="{ 'ai-agent-button': !isSelect, 'px-4 py-3' : true }" class="font-bold text-xl">AI Agent</span>
+      </span>
+    </div>
+
+    <div class="pricing-container py-8 slide-up-fade-in" *ngIf="isSelect">
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3 class="header-green">Gói Khởi Nghiệp</h3>
+          <p>(Dành cho những doanh nghiệp mới kinh doanh Online)</p>
+        </div>
+        <div class="card-body">
+          <div class="price-tier">
+            <div class="tier-info">Gói Tiêu chuẩn <span>5 users</span></div>
+            <div class="tier-price price-green">399.<span class="currency">500</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Chuyên nghiệp * <span>10 users</span></div>
+            <div class="tier-price price-green">799.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Khởi nghiệp <span>5 users</span></div>
+            <div class="tier-price price-green">1.198.<span class="currency">500</span><span
+                class="period">/tháng</span></div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Khởi nghiệp II <span>20 users</span></div>
+            <div class="tier-price price-green">1.598.<span class="currency">000</span><span
+                class="period">/tháng</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3 class="header-blue">Gói Doanh Nghiệp</h3>
+          <p>(Dành cho những doanh nghiệp kinh doanh Online vừa và nhỏ)</p>
+        </div>
+        <div class="card-body">
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp <span>25 users</span></div>
+            <div class="tier-price price-blue">1.197.<span class="currency">500</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp I <span>30 users</span></div>
+            <div class="tier-price price-blue">2.397.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp II <span>35 users</span></div>
+            <div class="tier-price price-blue">2.796.<span class="currency">500</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp III <span>40 users</span></div>
+            <div class="tier-price price-blue">3.196.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3 class="header-red">Gói Doanh nghiệp PRO</h3>
+          <p>(Dành cho những doanh nghiệp kinh doanh Online chuyên nghiệp)</p>
+        </div>
+        <div class="card-body">
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp PRO <span>50 users</span></div>
+            <div class="tier-price price-red">3.995.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp lớn I <span>100 users</span></div>
+            <div class="tier-price price-red">7.990.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp lớn II <span>150 users</span></div>
+            <div class="tier-price price-red">11.985.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+          <div class="price-tier">
+            <div class="tier-info">Gói Doanh nghiệp lớn III <span>200 users</span></div>
+            <div class="tier-price price-red">15.980.<span class="currency">000</span><span class="period">/tháng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3 class="header-orange">Gói Tập đoàn</h3>
+          <p>(Dành cho tập đoàn bán hàng đa kênh Chuyên nghiệp)</p>
+        </div>
+        <div class="card-body">
+          <div class="enterprise-tier">
+            <div class="user-count">500 users</div>
+            <div class="tier-price price-orange">39.950.<span class="currency">000</span><span
+                class="period">/tháng</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex md:flex-row flex-column  align-items-center justify-content-center gap-5 mt-5">
+        <div class="px-3 py-3 border-round-3xl"
+          style="background-color: var(--blue-color-app); color: var(--light-color-app)">
+          Gia hạn 6 tháng giảm 5%
+        </div>
+        <div class="px-3 py-3 border-round-3xl"
+          style="background-color: var(--blue-color-app); color: var(--light-color-app)">
+          Gia hạn 12 tháng giảm 20%
+        </div>
+        <div class="px-3 py-3 border-round-3xl"
+          style="background-color: var(--blue-color-app); color: var(--light-color-app)">
+          Gia hạn 24 tháng giảm 30%
+        </div>
+      </div>
+    </div>
+
+    <div class="py-8 slide-up-fade-in" *ngIf="!isSelect">
+      <div class="pricing-container">
+        <div class="pricing-plan plan-start">
+          <div class="plan-header">
+            <h2>START</h2>
+          </div>
+          <div class="plan-body">
+            <ul>
+              <li><span class="feature-icon">✔</span> Trực tư vấn 24/7</li>
+              <li><span class="feature-icon">✔</span> Tính giá, xác nhận đơn</li>
+              <li><span class="feature-icon">✔</span> Tra cứu đơn hàng</li>
+              <li><span class="feature-icon">✔</span> Tham gia vào các group</li>
+              <li><span class="feature-icon">✔</span> Lưu các cuộc hội thoại</li>
+              <li><span class="feature-icon">✔</span> Tư vấn đa ngôn ngữ</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="price-box">
+              5.000.000
+              <span>VND/ Năm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-plan plan-pro">
+          <div class="plan-header">
+            <h2>PRO</h2>
+          </div>
+          <div class="plan-body">
+            <ul>
+              <li><span class="feature-icon">✔</span> Tạo mã QR thanh toán</li>
+              <li><span class="feature-icon">✔</span> Xác nhận thanh toán</li>
+              <li><span class="feature-icon">✔</span> Đặt lịch, nhắc lịch</li>
+              <li><span class="feature-icon">✔</span> Tạo hợp đồng, văn bản</li>
+              <li><span class="feature-icon">✔</span> Tự triển khai dịch vụ</li>
+              <li><span class="feature-icon">✔</span> Các tính năng khác...</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <a href="#" class="cta-button">LIÊN HỆ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-app text-4xl font-bold py-7 flex justify-content-center align-items-center">
+      Doanh nghiệp có câu hỏi, AINOVA sẵn sàng giải đáp
+    </div>
+
+    <div class="py-5">
+      <p-accordion value="0">
+        <p-accordion-panel value="0">
+          <p-accordion-header>AI Agent của AINOVA là gì và khác biệt như thế nào?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Khác các nền tảng thông thường, AINOVA là nền tảng AI Agent mở và toàn diện. AINOVA mở ra kỷ nguyên AI
+              trong Quản trị Trải nghiệm, dùng AI Agent để thúc đẩy tất cả hoạt động hướng tới khách hàng trong toàn bộ
+              vòng đời như bán hàng (Sales) và chăm sóc khách hàng. AINOVA thu thập và phân tích dữ liệu trên tất cả các
+              điểm tiếp xúc, khuyến khích sự cộng tác liên chức năng giữa các bộ phận, ưu tiên phản hồi của khách hàng
+              và tận dụng các công nghệ tiên tiến để cung cấp trải nghiệm được cá nhân hóa.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="1">
+          <p-accordion-header>AI Agent của AINOVA khác gì chatbot thông thường?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              AI Agent của Filum.ai vượt trội hơn chatbot truyền thống nhờ khả năng thích ứng linh hoạt với nhu cầu sử
+              dụng. Thay vì chỉ phản hồi theo kịch bản có sẵn, AI Agent sử dụng LLMs để học ngôn ngữ thương hiệu, cá
+              nhân hóa câu trả lời dựa trên dữ liệu mua hàng, và phân tích cảm xúc/chủ đề để giải quyết vấn đề nhanh gọn
+              lẹ.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="2">
+          <p-accordion-header>Phần mềm quản lý bán hàng TUHA phù hợp với những ai?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Với một quy trình vận hành chuyên nghiệp, mở rộng linh hoạt, TUHA phù hợp với mọi mô hình, quy mô kinh
+              doanh online khác nhau. Ngay cả với những cửa hàng nhỏ hay doanh nghiệp lớn đều có thể triển khai một cách
+              dễ dàng.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="3">
+          <p-accordion-header>AINOVA tích hợp với các hệ thống và ứng dụng hiện có của doanh nghiệp như thế
+            nào?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Tại AINOVA Marketplace, chúng tôi cung cấp các tích hợp sẵn với các ứng dụng doanh nghiệp thường được sử
+              dụng (Zalo OA, Meta,...), ngoài ra còn hỗ trợ tích hợp qua: SDK, API, và Webhook. Trong trường hợp có các
+              yêu cầu tích hợp bổ sung, các doanh nghiệp có thể liên hệ với nhóm kỹ thuật của chúng tôi để thảo luận về
+              các như cầu cụ thể của doanh nghiệp.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="4">
+          <p-accordion-header>Phần mềm quản lý bán hàng TUHA giúp gì được cho bạn?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Khách hàng sẽ sở hữu ngay một quy trình quản lý kinh doanh online all-in-one tối ưu hiệu quả, kiểm soát dễ
+              dàng. Nâng cao năng suất làm viêc hơn 30%, rút ngắn hơn 70% thời gian cho các thao tác thủ công.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="5">
+          <p-accordion-header>Phần mềm TUHA dùng được trên những thiết bị nào?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Bạn có thể sử dụng phần mềm quản lý bán hàng TUHA trên nhiều thiết bị khác nhau như máy vi tính, laptop,
+              máy tính bảng, điện thoại thông minh. Riêng trên các thiết bị smartphone sẽ có riêng ứng dụng được thiết
+              kế tiện lợi.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+      </p-accordion>
+    </div>
+  </div>
+</div>

@@ -12,10 +12,10 @@ import { NgClass } from '@angular/common';
 })
 export class HomeComponent {
   genText = [
-    { text: 'Quản trị trải nghiệm', color: '#FF6B6B' },
-    { text: 'Phân tích phản hồi', color: '#4ECDC4' },
-    { text: 'Chăm sóc khách hàng', color: '#FFD93D' },
-    { text: 'Thu thập phản hồi', color: '#5B8BF7' }
+    { text: 'Quản trị trải nghiệm', color: '#fca717' },
+    { text: 'Phân tích phản hồi', color: '#de282e' },
+    { text: 'Chăm sóc khách hàng', color: '#ffce32' },
+    { text: 'Thu thập phản hồi', color: '#0058B0' }
   ];
 
   currentIndex = 0;

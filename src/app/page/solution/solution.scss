@@ -1,4 +1,6 @@
 .solution__card {
+  background: linear-gradient(180deg, var(--sky-color-app) 0%, var(--light-color-app) 100%);
+
   &--benefit {
     .item {
       border-radius: 40px;
