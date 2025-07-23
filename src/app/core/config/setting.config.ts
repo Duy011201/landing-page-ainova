@@ -11,6 +11,7 @@ export const SETTING = {
     RELATED_REGISTER: 'register',
     RELATED_HOME: 'home',
     RELATED_SOLUTION: 'solution',
+    RELATED_PRODUCT: 'product',
     RELATED_TABLE_PRICE: 'table-price',
     RELATED_CONTACT: 'contact',
     RELATED_ROOT: '',

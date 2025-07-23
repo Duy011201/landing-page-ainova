@@ -1,0 +1,385 @@
+<div class="product__card">
+  <div class="product__card--select lg:px-8 px-3 flex flex-column align-items-center justify-content-center gap-3">
+    <div class="text-6xl font-bold" style="color: var(--light-color-app)">Sản phẩm AINOVA</div>
+    <p class="text-xl" *ngIf="isSelect">Nền tảng phần mềm quản lý và vận hành kinh doanh online toàn diện.</p>
+    <p class="text-xl" *ngIf="!isSelect">AI Agent chuyên dụng chăm sóc khách hàng.</p>
+  </div>
+
+  <div class="lg:px-8 px-3">
+    <div class="cursor-pointer flex justify-content-center align-items-center">
+      <span class="custom-button-container" (click)="onChangeSelect()">
+        <span [ngClass]="{ 'ai-agent-button': isSelect, 'px-4 py-3' : true }" class="font-bold text-xl">Phần mềm</span>
+        <span [ngClass]="{ 'ai-agent-button': !isSelect, 'px-4 py-3' : true }" class="font-bold text-xl">AI Agent</span>
+      </span>
+    </div>
+
+    <div class="py-6 slide-up-fade-in" *ngIf="isSelect">
+      <p class="text-3xl md:px-8 px-0">
+        Kiểm soát dễ dàng, bán hàng hiệu quả, tính năng thông minh – triển khai nhanh chóng,
+        được hàng triệu nhà bán hàng online tin dùng.
+      </p>
+
+      <div class="text-4xl font-bold py-7 flex justify-content-center align-items-center"
+           style="color: var(--light-color-app)">
+        Các tính năng nổi bật
+      </div>
+
+      <div class="features-container">
+        <div class="card card--marketing">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+          </div>
+          <h3 class="card__title">Marketing</h3>
+          <ul class="card__features">
+            <li>Tựa giúp bạn nâng cao hiệu suất công việc của phòng Marketing trên 20%.</li>
+            <li>Dễ dàng quản lý và đo lường hiệu quả của chiến dịch quảng cáo.</li>
+            <li>Phân loại báo cáo chi phí quảng cáo, bài Post, doanh thu Marketing chi tiết.</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--sales">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M12 12V8"/><path d="m14 12 2-2 2 2"/></svg>
+          </div>
+          <h3 class="card__title">Hỗ trợ Sales</h3>
+          <ul class="card__features">
+            <li>Tự động lên đơn khi marketing đổ số về, cung cấp công cụ chia số linh hoạt và nhiều tiện ích khác.</li>
+            <li>Xử lý đơn theo trạng thái, báo cáo đầy đủ và chi tiết: doanh thu tỉ lệ chốt đơn hàng, tổng hợp Sale...</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--accounting">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+          <h3 class="card__title">Hỗ trợ kế toán</h3>
+          <ul class="card__features">
+            <li>Cung cấp hệ thống báo cáo đa dạng từ tổng hợp tới chi tiết, từ báo cáo hệ thống cho tới báo cáo từng hộ kinh doanh hay toàn công ty, ...</li>
+            <li>Xuất nhập dữ liệu trên Excel, tiết kiệm thời gian 70% ...</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--customer-care">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="card__title">Chăm sóc khách hàng</h3>
+          <ul class="card__features">
+            <li>Quản lý thông tin khách hàng, hệ thống gửi tin nhắn sms, Zalo,... các báo cáo CSKH</li>
+            <li>Tính năng chống rò rỉ data, bảo mật nhiều lớp với chức năng phân quyền cho nhân viên và quản lý</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--platform-connect">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"></path><path d="m14.5 9-5 5"></path><path d="M9 9h.01"></path><path d="M15 15h.01"></path></svg>
+          </div>
+          <h3 class="card__title">Kết nối đa nền tảng</h3>
+          <ul class="card__features">
+            <li>Đồng bộ dữ liệu từ Landing Page, kết nối Palion CRM, Palbox... tỷ lệ upsell tăng 38%.</li>
+            <li>Kết nối từ nhiều nguồn khác nhau: facebook, Zalo, ... Đồng bộ dữ liệu từ file excel, API.</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--reporting">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>
+          </div>
+          <h3 class="card__title">Báo cáo quản trị</h3>
+          <ul class="card__features">
+            <li>Hệ thống báo cáo trực quan, đa dạng, chi tiết giúp nhà quản lý đưa ra quyết định nhanh chóng và chính xác.</li>
+            <li>Với Tuha pro trên nền tảng điện thoại ios và android. Mọi hoạt động của doanh nghiệp của bạn trên lòng bàn tay.</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--shipping">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0M14 8h7l-4 4-4-4Z"/><path d="M14 8v11a1 1 0 0 0 1 1h1.5a1 1 0 0 0 1-1V8"/><path d="M10.1 2.4A2.3 2.3 0 0 0 8 2H4.5a2.5 2.5 0 0 0 0 5H8a2.3 2.3 0 0 0 2.1-1.6V2.4Z"/></svg>
+          </div>
+          <h3 class="card__title">Kết nối vận chuyển</h3>
+          <ul class="card__features">
+            <li>Liên kết 8 nhà vận chuyển hàng đầu Việt Nam. Ví dụ: VN Post; Viettel Post; GHN; GHTK; EMS; Best Express.</li>
+            <li>Tính năng báo mật chi tiết đơn hàng: mặt hàng bán, số điện thoại giúp doanh nghiệp của bạn không sợ bị cướp đơn từ nguồn này.</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+
+        <div class="card card--inventory">
+          <div class="card__icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><path d="M9 12h6"></path></svg>
+          </div>
+          <h3 class="card__title">Quản lý kho vận</h3>
+          <ul class="card__features">
+            <li>Kiểm soát mọi thứ trong lòng bàn tay: tạo mã thẻ; tạo mã sản phẩm, lọc đơn, chuyển hàng...</li>
+            <li>Quản lý kho giúp doanh nghiệp của bạn không chỉ dễ dàng hơn mà còn hiệu quả và tiết kiệm thời gian...</li>
+          </ul>
+          <button class="card__button">Xem thêm</button>
+        </div>
+      </div>
+
+      <div class="text-4xl font-bold py-7 flex justify-content-center align-items-center text-center"
+           style="color: var(--light-color-app)">
+        Tính năng Palbox
+        <br>
+        Quản trị data người dùng qua Fanpage Facebook
+      </div>
+
+      <div class="features-container-alt">
+        <div class="card-alt card-alt--messaging">
+          <div class="card-alt__header">
+            <div class="card-alt__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="card-alt__title">Quản lý tin nhắn khách hàng</h3>
+          </div>
+          <ul class="card-alt__features">
+            <li>Quản lý tin nhắn – bình luận của khách hàng trên Page từ phần mềm.</li>
+          </ul>
+        </div>
+
+        <div class="card-alt card-alt--auto-reply">
+          <div class="card-alt__header">
+            <div class="card-alt__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+            </div>
+            <h3 class="card-alt__title">Tự động trả lời thông minh</h3>
+          </div>
+          <ul class="card-alt__features">
+            <li>Trả lời bình luận, inbox khách hàng theo mẫu được thiết lập.</li>
+          </ul>
+        </div>
+
+        <div class="card-alt card-alt--status-update">
+          <div class="card-alt__header">
+            <div class="card-alt__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            </div>
+            <h3 class="card-alt__title">Cập nhật trạng thái chia đơn</h3>
+          </div>
+          <ul class="card-alt__features">
+            <li>Chia xoay vòng toàn bộ nhân viên hay chia theo nhân viên được chọn.</li>
+          </ul>
+        </div>
+
+        <div class="card-alt card-alt--filtering">
+          <div class="card-alt__header">
+            <div class="card-alt__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="card-alt__title">Bộ lọc hội thoại nâng cao</h3>
+          </div>
+          <ul class="card-alt__features">
+            <li>Quét số điện thoại từ bình luận hoặc tin nhắn trên Page.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-4xl font-bold py-7 flex justify-content-center align-items-center text-center"
+           style="color: var(--light-color-app)">
+        Tính năng Palion CRM
+        <br>
+        Hệ quản trị chăm sóc khách hàng
+      </div>
+
+      <div class="features-container-crm">
+        <div class="card-crm card-crm--customer-management">
+          <div class="card-crm__header">
+            <div class="card-crm__icon-wrapper">
+              <i class="fas fa-address-book"></i>
+            </div>
+            <h3 class="card-crm__title">Quản lý Khách hàng</h3>
+          </div>
+          <ul class="card-crm__list">
+            <li>Chia sẻ khách hàng cho nhân viên chăm sóc khách hàng</li>
+            <li>Lưu lại lịch sử Chăm sóc KH</li>
+            <li>Nhắc nhở nhân viên chăm sóc khách hàng</li>
+            <li>Thông báo, nhắc nhở khi đến lịch hẹn chăm sóc khách hàng</li>
+          </ul>
+        </div>
+
+        <div class="card-crm card-crm--order-management">
+          <div class="card-crm__header">
+            <div class="card-crm__icon-wrapper">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="card-crm__title">Quản lý đơn hàng</h3>
+          </div>
+          <ul class="card-crm__list">
+            <li>Thống kê danh sách đơn hàng của KH</li>
+            <li>Quản lý theo trạng thái đơn hàng</li>
+          </ul>
+        </div>
+
+        <div class="card-crm card-crm--sms">
+          <div class="card-crm__header">
+            <div class="card-crm__icon-wrapper">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="card-crm__title">Gửi SMS</h3>
+          </div>
+          <ul class="card-crm__list">
+            <li>Tạo các tin nhắn mẫu</li>
+            <li>Thiết lập kịch bản nhắn tin tự động</li>
+            <li>Thống kê toàn bộ tin nhắn đã được gửi đi</li>
+          </ul>
+        </div>
+
+        <div class="card-crm card-crm--zns">
+          <div class="card-crm__header">
+            <div class="card-crm__icon-wrapper">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <h3 class="card-crm__title">Gửi tin ZNS</h3>
+          </div>
+          <ul class="card-crm__list">
+            <li>Đồng bộ các template đã đăng ký với Zalo</li>
+            <li>Lên lịch bản gửi tin nhắn tự động</li>
+            <li>Thống kê toàn bộ tin nhắn ZNS đã được gửi đi cho khách hàng</li>
+          </ul>
+        </div>
+
+        <div class="card-crm card-crm--reporting">
+          <div class="card-crm__header">
+            <div class="card-crm__icon-wrapper">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3 class="card-crm__title">Báo cáo</h3>
+          </div>
+          <ul class="card-crm__list">
+            <li>Báo cáo hệ thống</li>
+            <li>Báo cáo KPI chăm sóc khách hàng</li>
+            <li>Báo cáo nhân viên tổng hợp</li>
+          </ul>
+        </div>
+
+        <div class="card-crm card-crm--permission">
+          <div class="card-crm__header">
+            <div class="card-crm__icon-wrapper">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h3 class="card-crm__title">Phân quyền</h3>
+          </div>
+          <ul class="card-crm__list">
+            <li>Hệ thống phân quyền tự động, linh hoạt</li>
+            <li>Vai trò trưởng nhóm</li>
+            <li>Vai trò Bưng KH theo nhóm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-8 slide-up-fade-in" *ngIf="!isSelect">
+      <div class="product__card--reason py-8 grid gap-6 justify-content-center">
+        <div class="item lg:col-3 col-12 p-5">
+          <p class="text-6xl font-bold">50%</p>
+          <p class="text-xl content">Giảm 50% Chi phí nhân sự chăm sóc khách hàng</p>
+        </div>
+        <div class="item lg:col-3 col-12 p-5">
+          <p class="text-6xl font-bold">280</p>
+          <p class="text-xl content">Thực tế tại một doanh nghiệp, Chatbot đã phản hồi đến 280 tin nhắn từ sau 10h tối</p>
+        </div>
+        <div class="item lg:col-3 col-12 p-5">
+          <p class="text-6xl font-bold">60</p>
+          <p class="text-xl content">Năng suất gấp 60 lần một nhân viên thông thường</p>
+        </div>
+        <div class="item lg:col-3 col-12 p-5">
+          <p class="text-6xl font-bold">100%</p>
+          <p class="text-xl content">Phản hồi 100% không giới hạn số lượng khách chat cùng lúc</p>
+        </div>
+        <div class="item lg:col-3 col-12 p-5">
+          <p class="text-6xl font-bold">80%</p>
+          <p class="text-xl content">Tự xử lý đến 80% thắc mắc của khách hàng</p>
+        </div>
+        <div class="item lg:col-3 col-12 p-5">
+          <p class="text-6xl font-bold">24/7</p>
+          <p class="text-xl content">Phục vụ 24/7 không ngừng nghỉ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-4xl font-bold py-7 flex justify-content-center align-items-center"
+         style="color: var(--light-color-app)">
+      Doanh nghiệp có câu hỏi, AINOVA sẵn sàng giải đáp
+    </div>
+
+    <div class="py-5">
+      <p-accordion value="0">
+        <p-accordion-panel value="0">
+          <p-accordion-header>AI Agent của AINOVA là gì và khác biệt như thế nào?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Khác các nền tảng thông thường, AINOVA là nền tảng AI Agent mở và toàn diện. AINOVA mở ra kỷ nguyên AI
+              trong Quản trị Trải nghiệm, dùng AI Agent để thúc đẩy tất cả hoạt động hướng tới khách hàng trong toàn bộ
+              vòng đời như bán hàng (Sales) và chăm sóc khách hàng. AINOVA thu thập và phân tích dữ liệu trên tất cả các
+              điểm tiếp xúc, khuyến khích sự cộng tác liên chức năng giữa các bộ phận, ưu tiên phản hồi của khách hàng
+              và tận dụng các công nghệ tiên tiến để cung cấp trải nghiệm được cá nhân hóa.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="1">
+          <p-accordion-header>AI Agent của AINOVA khác gì chatbot thông thường?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              AI Agent của AINOVA vượt trội hơn chatbot truyền thống nhờ khả năng thích ứng linh hoạt với nhu cầu sử
+              dụng. Thay vì chỉ phản hồi theo kịch bản có sẵn, AI Agent sử dụng LLMs để học ngôn ngữ thương hiệu, cá
+              nhân hóa câu trả lời dựa trên dữ liệu mua hàng, và phân tích cảm xúc/chủ đề để giải quyết vấn đề nhanh gọn
+              lẹ.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="2">
+          <p-accordion-header>Phần mềm quản lý bán hàng AINOVA phù hợp với những ai?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Với một quy trình vận hành chuyên nghiệp, mở rộng linh hoạt, AINOVA phù hợp với mọi mô hình, quy mô kinh
+              doanh online khác nhau. Ngay cả với những cửa hàng nhỏ hay doanh nghiệp lớn đều có thể triển khai một cách
+              dễ dàng.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="3">
+          <p-accordion-header>AINOVA tích hợp với các hệ thống và ứng dụng hiện có của doanh nghiệp như thế
+            nào?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Tại AINOVA Marketplace, chúng tôi cung cấp các tích hợp sẵn với các ứng dụng doanh nghiệp thường được sử
+              dụng (Zalo OA, Meta,...), ngoài ra còn hỗ trợ tích hợp qua: SDK, API, và Webhook. Trong trường hợp có các
+              yêu cầu tích hợp bổ sung, các doanh nghiệp có thể liên hệ với nhóm kỹ thuật của chúng tôi để thảo luận về
+              các như cầu cụ thể của doanh nghiệp.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="4">
+          <p-accordion-header>Phần mềm quản lý bán hàng AINOVA giúp gì được cho bạn?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Khách hàng sẽ sở hữu ngay một quy trình quản lý kinh doanh online all-in-one tối ưu hiệu quả, kiểm soát dễ
+              dàng. Nâng cao năng suất làm viêc hơn 30%, rút ngắn hơn 70% thời gian cho các thao tác thủ công.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+
+        <p-accordion-panel value="5">
+          <p-accordion-header>Phần mềm AINOVA dùng được trên những thiết bị nào?</p-accordion-header>
+          <p-accordion-content>
+            <p class="m-0">
+              Bạn có thể sử dụng phần mềm quản lý bán hàng AINOVA trên nhiều thiết bị khác nhau như máy vi tính, laptop,
+              máy tính bảng, điện thoại thông minh. Riêng trên các thiết bị smartphone sẽ có riêng ứng dụng được thiết
+              kế tiện lợi.
+            </p>
+          </p-accordion-content>
+        </p-accordion-panel>
+      </p-accordion>
+    </div>
+  </div>
+</div>

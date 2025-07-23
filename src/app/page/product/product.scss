@@ -1,0 +1,497 @@
+$font-family: 'Be Vietnam Pro', sans-serif;
+$background-color: #f0f7ff;
+$card-background: #ffffff;
+$text-color-primary: #333;
+$text-color-secondary: #555;
+$card-border-radius: 20px;
+$card-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+$card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
+
+$color-marketing: #00897b;
+$color-marketing-light: #e0f7fa;
+$color-sales: #1e88e5;
+$color-sales-light: #e3f2fd;
+$color-accounting: #8e24aa;
+$color-accounting-light: #f3e5f5;
+$color-customer-care: #5e35b1;
+$color-customer-care-light: #ede7f6;
+$checkmark-color: #5c6bc0;
+$color-platform: #a5c34b;
+$color-platform-light: #f1f8e9;
+$color-reporting: #26c6da;
+$color-reporting-light: #e0f7fa;
+$color-shipping: #26a69a;
+$color-shipping-light: #e0f2f1;
+$color-inventory: #bcaaa4;
+$color-inventory-light: #efebe9;
+
+$color-messaging: #1a73e8;
+$color-auto-reply: #34a853;
+$color-status-update: #7924af;
+$color-filtering: #ea4335;
+
+$font-family: 'Be Vietnam Pro', sans-serif;
+$background-color: #f4f7fa;
+$card-background: #ffffff;
+$text-color-primary: #1a202c;
+$text-color-secondary: #4a5568;
+$card-border-radius: 16px;
+$card-border: 1px solid #e2e8f0;
+$card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+$card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+$grid-gap: 24px;
+
+$color-qlkh: #298cff;
+$color-qlkh-light: #e7f3ff;
+$color-qldh: #ff9800;
+$color-qldh-light: #fff4e5;
+$color-sms: #ffc107;
+$color-sms-light: #fffbeb;
+$color-zns: #f7b731;
+$color-zns-light: #fef6e0;
+$color-report: #20c997;
+$color-report-light: #e6f5f0;
+$color-permission: #673ab7;
+$color-permission-light: #ede7f6;
+
+$font-family: 'Roboto', sans-serif;
+$background-color: #f8f9fa;
+$card-background: #ffffff;
+$text-color: #555;
+$card-border-radius: 20px;
+$card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+$grid-gap: 30px;
+
+$color-orange: #f39c12;
+$color-blue: #3498db;
+$color-red: #e74c3c;
+$color-indigo: #8e44ad;
+$color-purple: #9b59b6;
+$color-teal: #1abc9c;
+
+.product__card {
+  background: url("/assets/image/logo-bg-product.png");
+  //background: linear-gradient(180deg, var(--sky-color-app) 0%, var(--light-color-app) 100%);
+
+  &--select {
+    height: 200px;
+    width: 100%;
+  }
+
+  .custom-button-container {
+    background-color: var(--light-color-app);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .ai-agent-button {
+    padding: 12px 28px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue-color-app), #e0c3fc);
+  }
+
+  .features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: $card-background;
+    border-radius: $card-border-radius;
+    box-shadow: $card-shadow;
+    padding: 30px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: $card-shadow-hover;
+    }
+
+    &__icon-wrapper {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 22px;
+      color: $text-color-primary;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    &__features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      font-size: 15px;
+      color: $text-color-secondary;
+      width: 100%;
+      flex-grow: 1;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+
+        &::before {
+          content: '✔';
+          font-weight: bold;
+          margin-right: 10px;
+          color: $checkmark-color;
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 20px;
+      border: none;
+      color: white;
+      padding: 12px 35px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &--marketing {
+      .card__icon-wrapper { background: $color-marketing-light; color: $color-marketing; }
+      .card__features li::before { color: $color-marketing; }
+      .card__button { background: $color-marketing; }
+    }
+
+    &--sales {
+      .card__icon-wrapper { background: $color-sales-light; color: $color-sales; }
+      .card__features li::before { color: $color-sales; }
+      .card__button { background: $color-sales; }
+    }
+
+    &--accounting {
+      .card__icon-wrapper { background: $color-accounting-light; color: $color-accounting; }
+      .card__features li::before { color: $color-accounting; }
+      .card__button { background: $color-accounting; }
+    }
+
+    &--customer-care {
+      .card__icon-wrapper { background: $color-customer-care-light; color: $color-customer-care; }
+      .card__features li::before { color: $color-customer-care; }
+      .card__button { background: $color-customer-care; }
+    }
+
+    &--platform-connect {
+      .card__icon-wrapper { background: $color-platform-light; color: $color-platform; }
+      .card__features li::before { color: $color-platform; }
+      .card__button { background: $color-platform; }
+    }
+
+    &--reporting {
+      .card__icon-wrapper { background: $color-reporting-light; color: $color-reporting; }
+      .card__features li::before { color: $color-reporting; }
+      .card__button { background: $color-reporting; }
+    }
+
+    &--shipping {
+      .card__icon-wrapper { background: $color-shipping-light; color: $color-shipping; }
+      .card__features li::before { color: $color-shipping; }
+      .card__button { background: $color-shipping; }
+    }
+
+    &--inventory {
+      .card__icon-wrapper { background: $color-inventory-light; color: $color-inventory; }
+      .card__features li::before { color: $color-inventory; }
+      .card__button { background: $color-inventory; }
+    }
+  }
+
+  .features-container-alt {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .card-alt {
+    background: $card-background;
+    border-radius: 16px;
+    box-shadow: $card-shadow;
+    padding: 25px;
+    flex: 1 1 500px;
+    max-width: 580px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $card-shadow-hover;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 20px;
+      color: $text-color-primary;
+      font-weight: 700;
+    }
+
+    &__features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: $text-color-secondary;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+
+        &::before {
+          content: '✔';
+          font-weight: bold;
+          margin-right: 10px;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    &--messaging {
+      .card-alt__icon { color: $color-messaging; }
+      .card-alt__features li::before { color: $color-messaging; }
+    }
+
+    &--auto-reply {
+      .card-alt__icon { color: $color-auto-reply; }
+      .card-alt__features li::before { color: $color-auto-reply; }
+    }
+
+    &--status-update {
+      .card-alt__icon { color: $color-status-update; }
+      .card-alt__features li::before { color: $color-status-update; }
+    }
+
+    &--filtering {
+      .card-alt__icon { color: $color-filtering; }
+      .card-alt__features li::before { color: $color-filtering; }
+    }
+  }
+
+  .features-container-crm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $grid-gap;
+  }
+
+  .card-crm {
+    background: $card-background;
+    border-radius: $card-border-radius;
+    border: $card-border;
+    box-shadow: $card-shadow;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $card-shadow-hover;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      gap: 16px;
+    }
+
+    &__icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      color: $text-color-primary;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0 24px 24px 24px;
+      margin: 0;
+      border-top: $card-border;
+      flex-grow: 1;
+      padding-top: 24px;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        color: $text-color-secondary;
+        font-size: 15px;
+
+        &::before {
+          content: '✔';
+          font-weight: bold;
+          margin-right: 10px;
+          line-height: 1.6;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    &--customer-management {
+      .card-crm__icon-wrapper { background: $color-qlkh-light; i { color: $color-qlkh; }}
+      .card-crm__list li::before { color: $color-qlkh; }
+    }
+    &--order-management {
+      .card-crm__icon-wrapper { background: $color-qldh-light; i { color: $color-qldh; }}
+      .card-crm__list li::before { color: $color-qldh; }
+    }
+    &--sms {
+      .card-crm__icon-wrapper { background: $color-sms-light; i { color: $color-sms; }}
+      .card-crm__list li::before { color: $color-sms; }
+    }
+    &--zns {
+      .card-crm__icon-wrapper { background: $color-zns-light; i { color: $color-zns; }}
+      .card-crm__list li::before { color: $color-zns; }
+    }
+    &--reporting {
+      .card-crm__icon-wrapper { background: $color-report-light; i { color: $color-report; }}
+      .card-crm__list li::before { color: $color-report; }
+    }
+    &--permission {
+      .card-crm__icon-wrapper { background: $color-permission-light; i { color: $color-permission; }}
+      .card-crm__list li::before { color: $color-permission; }
+    }
+  }
+
+  &--reason {
+    .item:nth-of-type(1) {
+      color: var(--blue-color-app)
+    }
+
+    .item:nth-of-type(2) {
+      color: var(--yellow-color-app)
+    }
+
+    .item:nth-of-type(3) {
+      color: var(--red-color-app)
+    }
+
+    .item:nth-of-type(4) {
+      color: var(--green-color-app)
+    }
+
+    .item:nth-of-type(5) {
+      color: var(--blue-color-app)
+    }
+
+    .item:nth-of-type(6) {
+      color: var(--orange-color-app)
+    }
+
+    .item {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: color 0.3s ease;
+      background-color: var(--light-color-app);
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 0%;
+        background: linear-gradient(to top left, #8ec5fc, #e0c3fc);
+        z-index: 0;
+        transition: height 0.4s ease-in-out;
+        border-radius: 12px;
+      }
+
+      &:hover::before {
+        height: 100%;
+      }
+
+      > * {
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease;
+      }
+
+      .content {
+        color: var(--content-color-app)
+      }
+
+      &:hover {
+        color: var(--light-color-app) !important;
+
+        .content {
+          color: var(--light-color-app) !important;
+        }
+      }
+    }
+  }
+}
+

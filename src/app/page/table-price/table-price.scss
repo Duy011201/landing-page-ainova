@@ -1,12 +1,12 @@
 .table-price__card {
   background: linear-gradient(180deg, var(--sky-color-app) 0%, var(--light-color-app) 100%);
-
   &--select {
     height: 200px;
     width: 100%;
   }
 
   .custom-button-container {
+    background-color: var(--light-color-app);
     display: inline-flex;
     align-items: center;
     border-radius: 999px;
@@ -55,24 +55,24 @@
     height: 120px;
     text-align: center;
     margin-bottom: 1.5rem;
-  }
 
-  .card-header h3 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem 0;
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+    }
+
+    p {
+       font-size: 0.9rem;
+       color: var(--text-secondary);
+       min-height: 40px;
+     }
   }
 
   .header-green { color: var(--green-color-app); }
   .header-blue { color: var(--blue-color-app); }
   .header-red { color: var(--red-color-app); }
   .header-orange { color: var(--orange-color-app); }
-
-  .card-header p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    min-height: 40px;
-  }
 
   .card-body {
     flex-grow: 1;
@@ -91,19 +91,31 @@
     font-size: 1rem;
     color: var(--text-primary);
     font-weight: 500;
-  }
 
-  .tier-info span {
-    display: block;
+    span {
+      display: block;
       font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 400;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
   }
 
   .tier-price {
     justify-self: end;
     font-size: 2rem;
     font-weight: 700;
+
+    .currency {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .period {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      vertical-align: baseline;
+    }
   }
 
   .price-green { color: var(--green-color-app); }
@@ -111,37 +123,24 @@
   .price-red { color: var(--red-color-app); }
   .price-orange { color: var(--orange-color-app); }
 
-  .tier-price .currency {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .tier-price .period {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-    vertical-align: baseline;
-  }
-
   .enterprise-tier {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding-top: 3rem;
-  }
 
-  .enterprise-tier .user-count {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-  }
+    .user-count {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
 
-  .enterprise-tier .tier-price {
-    font-size: 2.75rem;
+    .tier-price {
+       font-size: 2.75rem;
+     }
   }
-
 
   .pricing-container {
     display: flex;
@@ -149,8 +148,6 @@
     justify-content: center;
     gap: 2rem;
   }
-
-  $text-color: #333;
 
   .pricing-plan {
     border-radius: 16px;
@@ -249,6 +246,13 @@
       font-weight: 700;
       display: inline-block;
       transition: background-color 0.3s ease;
+    }
+  }
+
+  .plan-ai {
+    img {
+      animation: pulse-scale 2s ease-in-out infinite;
+      width: 600px
     }
   }
 }

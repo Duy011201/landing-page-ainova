@@ -15,13 +15,13 @@
       @if (!isMobile) {
         <div class="flex lg:gap-5 gap-5">
           <span class="header__card--item cursor-pointer text-lg" routerLink="/home">Về chúng tôi</span>
-          <span class="header__card--item cursor-pointer text-lg">Sản phẩm</span>
+          <span class="header__card--item cursor-pointer text-lg" routerLink="/product">Sản phẩm</span>
           <span class="header__card--item cursor-pointer text-lg" routerLink="/solution">Giải pháp</span>
           <span class="header__card--item cursor-pointer text-lg" routerLink="/table-price">Bảng giá</span>
           <span class="header__card--item cursor-pointer text-lg" routerLink="/contact">Liên hệ</span>
         </div>
         <div class="flex align-items-center lg:gap-5 gap-3">
-          <span class="app-btn text-lg px-4" (click)="onRippleButtonClick($event)" routerLink="/contact">Đăng ký ngay</span>
+          <span class="app-btn text-lg px-4 border-1 border-white" (click)="onRippleButtonClick($event)" routerLink="/contact">Đăng ký ngay</span>
         </div>
       } @else {
         <p-sidebar [(visible)]="sidebarVisible" position="right" showCloseIcon="false">

@@ -15,9 +15,9 @@ export class HeaderComponent {
 
   menuItems = [
     { label: 'Về chúng tôi', icon: 'fa-solid fa-house', routerLink: '/home' },
-    { label: 'Sản phẩm', icon: 'fa-solid fa-gear', routerLink: '/home' },
+    { label: 'Sản phẩm', icon: 'fa-solid fa-gear', routerLink: '/product' },
     { label: 'Giải pháp', icon: 'fa-solid fa-house', routerLink: '/solution' },
-    { label: 'Bảng giá', icon: 'fa-solid fa-table', routerLink: '/home' },
+    { label: 'Bảng giá', icon: 'fa-solid fa-table', routerLink: '/table-price' },
     { label: 'Liên hệ', icon: 'fa-solid fa-paper-plane', routerLink: '/contact' }
   ];
 
