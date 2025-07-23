@@ -25,13 +25,17 @@ export class ContactComponent {
     });
   }
   onSubmit() {
-    this.appService.post('webhook/c8e092d3-057c-48f6-a619-d7791966e5d8', this.form.value).subscribe({
-      next: (res) => {
-        alert("Bạn đã gửi thông tin thành công!");
-      },
-      error: (err) => {
-        alert("Gửi thông tin thất bại!");
-      }
-    });
+    if (!this.form.invalid) {
+      this.appService.post('webhook/c8e092d3-057c-48f6-a619-d7791966e5d8', this.form.value).subscribe({
+        next: (res) => {
+          alert("Bạn đã gửi thông tin thành công!");
+        },
+        error: (err) => {
+          alert("Gửi thông tin thất bại!");
+        }
+      });
+    } else {
+      alert("Bạn chưa nhập đầy đủ thông tin!");
+    }
   }
 }
