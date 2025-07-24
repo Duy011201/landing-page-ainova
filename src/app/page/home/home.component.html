@@ -1,6 +1,6 @@
 <section>
   <div class="home__card">
-    <div class="home__card--center py-8 relative">
+    <div class="home__card--center py-8 lg:px-0 px-3 relative">
       <span class="avatar absolute md:block hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 43 43" fill="none" class="mdl-js">
           <path
@@ -71,10 +71,10 @@
       </span>
 
       <div class="flex justify-content-center align-items-center flex-column">
-        <div class="text-7xl font-bold" [style.color]="genText[currentIndex].color" [ngClass]="{ 'gen-text': animate }">
+        <div class="lg:text-7xl text-5xl font-bold" [style.color]="genText[currentIndex].color" [ngClass]="{ 'gen-text': animate }">
           {{ genText[currentIndex].text }}
         </div>
-        <div class="text-7xl font-bold gradient-text relative">
+        <div class="lg:text-7xl text-5xl font-bold gradient-text relative">
           với GenAI
           <span class="absolute top-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none"
@@ -141,8 +141,8 @@
 
     <div class="home__card--prize grid py-8">
       <div class="lg:px-8 px-3 mt-5">
-        <div class="grid md:gap-5 gap-0 justify-content-center">
-          <div class="support md:col-3 col-12 md:mt-0 mt-5 md:w-25rem w-30rem slide-up-fade-in p-3 flex flex-column">
+        <div class="grid gap-5 justify-content-center">
+          <div class="support col-12 sm:col-6 lg:col-4 md:mt-0 mt-5 md:max-w-30rem max-w-18rem slide-up-fade-in p-3 flex flex-column">
             <img src="./assets/image/ai-agent-sales.webp">
             <div class="flex flex-column gap-2 mt-2">
               <p class="font-bold text-sm">AI Agent for Sales</p>
@@ -152,7 +152,7 @@
               </p>
             </div>
           </div>
-          <div class="support md:col-3 col-12 md:mt-0 mt-5 md:w-25rem w-30rem slide-up-fade-in p-3 flex flex-column">
+          <div class="support col-12 sm:col-6 lg:col-4 md:mt-0 mt-5 md:max-w-30rem max-w-18rem slide-up-fade-in p-3 flex flex-column">
             <img src="./assets/image/ai-agent-sustomer-service.webp">
             <div class="flex flex-column gap-2 mt-2">
               <p class="font-bold text-sm">AI Agent for Customer Service</p>
@@ -162,7 +162,7 @@
               </p>
             </div>
           </div>
-          <div class="support md:col-3 col-12 md:mt-0 mt-5 md:w-25rem w-30rem slide-up-fade-in p-3 flex flex-column">
+          <div class="support col-12 sm:col-6 lg:col-4 md:mt-0 mt-5 md:max-w-30rem max-w-18rem slide-up-fade-in p-3 flex flex-column">
             <img src="./assets/image/ai-customer-experience-management.webp">
             <div class="flex flex-column gap-2 mt-2">
               <p class="font-bold text-sm">Customer Experience Management</p>
@@ -280,10 +280,10 @@
 
       <div class="home__card--banner py-8 border-round-2xl">
         <div class="banner-center grid align-items-center justify-content-between px-5">
-          <span class="lg:col-6 col-12 md:text-5xl text-2xl text-left font-bold" style="color: var(--blue-color-app)">
+          <span class="lg:col-6 col-12 md:text-5xl text-left font-bold" style="color: var(--blue-color-app)">
             Nâng tầm trải nghiệm khách hàng với
             <br>
-            <span class="gradient-text md:text-5xl text-2xl font-bold relative mr-6">GenAI
+            <span class="gradient-text md:text-5xl font-bold relative mr-6">GenAI
               <span class="absolute top-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none"
                    class="mdl-js">
@@ -336,10 +336,10 @@
             </svg>
             </span>
             </span>
-            <span class="md:text-5xl text-2xl font-bold">
+            <span class="md:text-5xl text-xl font-bold">
               cùng AINOVA</span>
           </span>
-          <span class="lg:col-6 col-12 w-22rem px-2 py-5 border-round-2xl md:text-3xl text-xl cursor-pointer app-btn md:mt-0 mt-4"
+          <span class="lg:col-6 col-12 md:w-22rem w-19 px-2 py-5 border-round-2xl md:text-3xl text-xl cursor-pointer app-btn md:mt-0 mt-4"
                 style="background-color: var(--blue-color-app); color: var(--light-color-app)"
             (click)="onRippleButtonClick($event)">
             Đặt lịch tư vấn miễn phí

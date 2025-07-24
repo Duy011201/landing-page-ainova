@@ -1,11 +1,11 @@
-<div class="product__card">
+<div class="product__card py-5">
   <div class="product__card--select lg:px-8 px-3 flex flex-column align-items-center justify-content-center gap-3">
     <div class="text-6xl font-bold" style="color: var(--light-color-app)">Sản phẩm AINOVA</div>
     <p class="text-xl" *ngIf="isSelect">Nền tảng phần mềm quản lý và vận hành kinh doanh online toàn diện.</p>
     <p class="text-xl" *ngIf="!isSelect">AI Agent chuyên dụng chăm sóc khách hàng.</p>
   </div>
 
-  <div class="lg:px-8 px-3">
+  <div class="lg:px-8 px-3 md:py-0 py-7">
     <div class="cursor-pointer flex justify-content-center align-items-center">
       <span class="custom-button-container" (click)="onChangeSelect()">
         <span [ngClass]="{ 'ai-agent-button': isSelect, 'px-4 py-3' : true }" class="font-bold text-xl">Phần mềm</span>

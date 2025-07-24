@@ -5,7 +5,7 @@
     <p class="text-xl" *ngIf="!isSelect">Sở hữu AI Agent chuyên dụng với mức phí hợp lí cho mọi quy mô.</p>
   </div>
 
-  <div class="lg:px-8 px-3">
+  <div class="lg:px-8 px-3 md:py-0 py-4">
     <div class="cursor-pointer flex justify-content-center align-items-center">
       <span class="custom-button-container" (click)="onChangeSelect()">
         <span [ngClass]="{ 'ai-agent-button': isSelect, 'px-4 py-3' : true }" class="font-bold text-xl">Phần mềm</span>
@@ -175,7 +175,7 @@
         </div>
 
         <div class="plan-ai flex align-items-center justify-content-center">
-          <img src="assets/image/ai-phone.webp">
+          <img class="md:w-30rem w-20rem" src="assets/image/ai-phone.webp">
         </div>
       </div>
     </div>

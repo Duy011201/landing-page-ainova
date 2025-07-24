@@ -60,7 +60,6 @@ $card-background: #ffffff;
 $text-color: #555;
 $card-border-radius: 20px;
 $card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-$grid-gap: 30px;
 
 $color-orange: #f39c12;
 $color-blue: #3498db;
@@ -114,7 +113,7 @@ $color-teal: #1abc9c;
     border-radius: $card-border-radius;
     box-shadow: $card-shadow;
     padding: 30px;
-    max-width: 280px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -323,12 +322,14 @@ $color-teal: #1abc9c;
   }
 
   .features-container-crm {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $grid-gap;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
   }
 
   .card-crm {
+    width: 400px;
     background: $card-background;
     border-radius: $card-border-radius;
     border: $card-border;
