@@ -70,6 +70,8 @@ $color-teal: #1abc9c;
 
 .product__card {
   background: url("/assets/image/logo-bg-product.png");
+  background-repeat: no-repeat;
+  height: 100%;
   //background: linear-gradient(180deg, var(--sky-color-app) 0%, var(--light-color-app) 100%);
 
   &--select {
