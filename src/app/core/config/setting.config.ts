@@ -9,7 +9,7 @@ export const SETTING = {
     RELATED_NOT_FOUND: '**',
     RELATED_LOGIN: 'login',
     RELATED_REGISTER: 'register',
-    RELATED_HOME: 'home',
+    RELATED_HOME: '',
     RELATED_SOLUTION: 'solution',
     RELATED_PRODUCT: 'product',
     RELATED_TABLE_PRICE: 'table-price',
