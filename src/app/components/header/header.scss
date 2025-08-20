@@ -3,9 +3,54 @@
   background-size: 100% 100%;
   font-family: Inter, sans-serif;
   height: 30px;
-  color: var(--dark-color-app);
-  border-bottom: 1px solid var(--border-color-app);
-  //background: linear-gradient(180deg, #002b33, rgba(0, 43, 51, .25)), linear-gradient(90deg, var(--blue-color-app) 21.86%, var(--yellow-color-app) 78.13%);
+  color: var(--border-color);
+  background: rgba(#021557, 0.9);
+
+  //.banner-title {
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%, -50%);
+  //  white-space: nowrap;
+  //  width: 100%;
+  //  text-align: center;
+  //}
+
+  .banner-before {
+    background: url("/assets/image/banner_before_bg.png");
+    background-size: calc(100% + 23px);
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 317px;
+    z-index: 0;
+  }
+
+  .banner-after {
+    background: url("/assets/image/banner_after_bg.png");
+    background-repeat: no-repeat;
+    background-size: calc(100% - 100px);
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 317px;
+    z-index: 0;
+  }
+}
+
+.header__card {
+  max-height: var(--height-header);
+  min-height: var(--height-header);
+  box-shadow: 0 12px 20px 6px rgba(104, 112, 118, 0.08);
+  transition: box-shadow 0.15s linear, background-color 0.3s;
+  background-color: var(--blue-color-app);
+  color: var(--light-color-app);
+  position: relative;
 
   .banner-title {
     position: absolute;
@@ -42,15 +87,6 @@
     width: 317px;
     z-index: 0;
   }
-}
-
-.header__card {
-  max-height: var(--height-header);
-  min-height: var(--height-header);
-  box-shadow: 0 12px 20px 6px rgba(104, 112, 118, 0.08);
-  transition: box-shadow 0.15s linear, background-color 0.3s;
-  background-color: var(--blue-color-app);
-  color: var(--light-color-app);
 
   &--logo {
     object-fit: contain;
@@ -60,8 +96,13 @@
   }
 
   &--item {
+    border-radius: 6px;
+    transition: background-color 0.5s ease;
+    padding: 4px 8px;
+    font-size: 16px;
+
     &:hover {
-      scale: 1.1;
+      background-color: rgba(255, 255, 255, 0.1);
     }
   }
 
@@ -69,6 +110,10 @@
     .mobile-item {
       width: 100%;
       height: 50px;
+
+      &:hover {
+        background-color: var(--border-color-app);
+      }
     }
   }
 }

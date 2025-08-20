@@ -6,76 +6,28 @@
 
   &--center {
     position: relative;
-    background-size: 100% 100%;
     font-family: Inter, sans-serif;
-    height: 450px;
+    height: 712px;
     color: var(--light-color-app);
-    background-image: linear-gradient(180deg, #ffece1, #fff);
+    //background-size: 100% 100%;
+    //background-image: linear-gradient(180deg, #ffece1, #fff);
+    background-image: url('/assets/image/bg-sean-pollock.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 
-    .avatar:nth-of-type(1),
-    .avatar:nth-of-type(2),
-    .avatar:nth-of-type(3),
-    .avatar:nth-of-type(4),
-    .avatar:nth-of-type(5),
-    .avatar:nth-of-type(6) {
-      opacity: 0;
-      animation-fill-mode: forwards;
-      animation-duration: 0.8s;
-      animation-timing-function: ease-out;
-      cursor: pointer;
-
-      img {
-        width: 70px;
-        height: 70px;
-      }
-
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: rotate(20deg) scale(1.2);
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
     }
 
-    .avatar:nth-of-type(1) {
-      top: 100px;
-      left: 250px;
-      animation-name: slide-in-left;
-      animation-delay: 0.1s;
-    }
-
-    .avatar:nth-of-type(2) {
-      top: 100px;
-      right: 250px;
-      animation-name: slide-in-right;
-      animation-delay: 0.3s;
-    }
-
-    .avatar:nth-of-type(3) {
-      top: 230px;
-      left: 230px;
-      animation-name: slide-in-left;
-      animation-delay: 0.5s;
-    }
-
-    .avatar:nth-of-type(4) {
-      top: 270px;
-      right: 280px;
-      animation-name: slide-in-right;
-      animation-delay: 0.1s;
-    }
-
-    .avatar:nth-of-type(5) {
-      top: 390px;
-      left: 350px;
-      animation-name: slide-in-left;
-      animation-delay: 0.3s;
-    }
-
-    .avatar:nth-of-type(6) {
-      top: 390px;
-      right: 380px;
-      animation-name: slide-in-right;
-      animation-delay: 0.5s;
+    > * {
+      position: relative;
+      z-index: 2;
     }
 
     .try-product {
@@ -86,6 +38,15 @@
     .gen-text {
       animation: title-animated 1s ease-out 1 both;
     }
+  }
+
+  &--vision-mission {
+    .decoration-text {
+      display: inline-block;
+      width: 25px;
+      border-bottom: 2px solid var(--blue-color-app);
+      transform: translateY(6px);
+    }
 
     .gradient-text {
       background: -webkit-linear-gradient(right, rgb(0, 116, 255), rgb(255, 62, 249)) text;
@@ -93,6 +54,18 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
+    }
+
+    .vision {
+      color: var(--border-color);
+      background-color: var(--blue-color-app);
+
+      .card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        flex-grow: 1;
+      }
     }
   }
 
@@ -527,46 +500,13 @@
 
 @media (max-width: 1400px) {
   .home__card--prize {
-    height: 1250px;
+    height: 800px;
   }
 }
 
-@media (max-width: 1200px) {
-  .home__card--banner {
-    .avatar:nth-of-type(1) {
-      top: 100px;
-      left: 40px;
-    }
-
-    .avatar:nth-of-type(2) {
-      top: 100px;
-      right: 40px;
-    }
-
-    .avatar:nth-of-type(3) {
-      top: 230px;
-      left: 130px;
-    }
-
-    .avatar:nth-of-type(4) {
-      top: 270px;
-      right: 100px;
-    }
-
-    .avatar:nth-of-type(5) {
-      top: 390px;
-      left: 120px;
-    }
-
-    .avatar:nth-of-type(6) {
-      top: 390px;
-      right: 120px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .home__card--prize {
-    height: 1800px !important;
+    height: 1300px !important;
   }
 }
+
