@@ -3,7 +3,7 @@
 
   &--benefit {
     .item {
-      border-radius: 40px;
+      border-radius: var(--app-border-radius-round);
       width: 90%;
       animation: pulse-scale 2s ease-in-out infinite;
     }
@@ -13,7 +13,7 @@
     .item:nth-of-type(1),
     .item:nth-of-type(2) {
       position: relative;
-      border-radius: 30px;
+      border-radius: var(--app-border-radius-round);
       overflow: hidden;
       min-height: 400px;
       padding: 1.5rem;
@@ -34,7 +34,7 @@
       }
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(var(--scale-app));
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       }
 
@@ -53,7 +53,7 @@
         bottom: 20px;
         right: 20px;
         z-index: 2;
-        border-radius: 16px;
+        border-radius: var(--app-border-radius);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         color: var(--light-color-app);
@@ -89,7 +89,7 @@
 
       &:hover {
         img {
-          transform: scale(1.25);
+          transform: scale(var(--scale-app));
         }
       }
     }
@@ -152,7 +152,7 @@
 
       &:hover {
         img {
-          transform: scale(1.05);
+          transform: scale(var(--scale-app));
         }
       }
     }

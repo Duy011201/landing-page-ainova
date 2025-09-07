@@ -1,0 +1,30 @@
+<div class="testimonial py-8 border-round-2xl lg:block hidden slide-up-fade-in">
+  <div class="flex align-items-center justify-content-center">
+    <div class="wrap-content md:px-0 px-3">
+      <span class="md:text-5xl text-left font-bold" style="color: var(--blue-color-app)">
+        Khách hàng nói gì về chúng tôi
+      </span>
+
+      <p-carousel [value]="testimonials" [numVisible]="2" [numScroll]="1" [circular]="false"
+        [responsiveOptions]="responsiveOptions" [showNavigators]="false">
+        <ng-template pTemplate="item" let-item>
+          <div class="testimonial--card p-5 flex flex-column gap-3 mt-5">
+            <span class="text-3xl font-bold">{{ item.companyName }}</span>
+            <span class="caption">{{ item.caption }}</span>
+            <span class="flex gap-5">
+              <img style="height: 50px; width: 50px; max-width: 100%;" src="{{ item.imageCEO }}"
+                [alt]="item.companyName" />
+              <div>
+                <div class="text-xl">{{ item.CEOName }}</div>
+                <div class="text-sm">{{ item.CEOPosition }}</div>
+              </div>
+              <div style="background: var(--text-color-app); width: 1px;"></div>
+              <img style="height: 50px; width: 150px; max-width: 100%;" src="{{ item.companyLogo }}"
+                [alt]="item.companyName" />
+            </span>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</div>

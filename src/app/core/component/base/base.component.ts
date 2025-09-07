@@ -7,7 +7,6 @@ import { Subscription } from 'rxjs';
 import { SharedModule } from '@app/core/module/share.module';
 import { LoadingComponent } from '../loading/loading.component';
 import { Router } from '@angular/router';
-import { TYPE_CONFIG } from '@app/core/config/type.config';
 
 @Component({
   selector: 'app-base',
@@ -18,7 +17,7 @@ import { TYPE_CONFIG } from '@app/core/config/type.config';
 export class BaseComponent implements OnDestroy {
   protected subscriptions: Subscription[] = [];
   protected form: FormGroup;
-  protected TOAST_MESSAGE = TYPE_CONFIG.TOAST_MESSAGE;
+  protected TOAST_MESSAGE = SETTING.TOAST_MESSAGE;
 
   constructor(
     protected _messageService: MessageService,
@@ -58,7 +57,7 @@ export class BaseComponent implements OnDestroy {
    * It can be used to log toastMessage, show notifications, or redirect users to an error page.
    */
   toastMessage(
-    type: (typeof TYPE_CONFIG.TOAST_MESSAGE)[keyof typeof TYPE_CONFIG.TOAST_MESSAGE],
+    type: (typeof SETTING.TOAST_MESSAGE)[keyof typeof SETTING.TOAST_MESSAGE],
     title: any,
     message: any,
   ) {

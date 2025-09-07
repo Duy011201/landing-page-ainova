@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
+import {
+  ScheduleConsultationComponent
+} from '@app/core/component/schedule-consultation/schedule-consultation.component';
+import { TestimonialComponent } from '@app/core/component/testimonial/testimonial.component';
+import { FlatformComponent } from '@app/core/component/flatform/flatform.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     NgClass,
+    ScheduleConsultationComponent,
+    TestimonialComponent,
+    FlatformComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

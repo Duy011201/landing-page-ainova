@@ -11,32 +11,43 @@
 :root {
   --height-header: 82px;
   --app-shadows-btn: 0 12px 20px 6px rgb(104 112 118 / 0.08);
+  --app-shadows-block: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
   --app-fonts-sans: 'Lexend', 'Lexend Fallback';
+  --app-border-radius: 16px;
+  --app-border-radius-round: 30px;
 
   --light-color-app: #fff;
   --dark-color-app: #000;
   --blue-color-app: #021557;
   --text-color-app: #021557;
   --sky-color-app: #E9F6FF;
+  --sky-color-light-app: #cde2ff;
   --yellow-color-app: #ffce32;
   --green-color-app: #00ca68;
   --border-color-app: #efefef;
-  --orange-color-app: #fca717;
+  --orange-color-app: #ff8300;
+  --orange-color-light-app: #ffd7c3;
   --red-color-app: #de282e;
+  --aqua-cyan-color-app: #00DDE6;
   --background-button-app: #f4f4f4;
 
   --title-color-app: #101010;
-  --content-color-app: #555555;
+  --content-color-app: #4a5568;
+  --sub-content-color-app: #666666;;
   --background-color-app: rgba(0, 0, 0, .7);
 
   --ripple-color: rgba(255, 255, 255, 0.5);
   --ripple-duration: 0.7s;
   --ripple-scale-factor: 2.5;
 
-  --purple: #7e57c2;
+  --purple-color-app: #7e57c2;
+  --purple-color-light-app: #d8d9ff;
   --text-primary: #333;
   --text-secondary: #6c757d;
   --border-color: #e0e0e0;
+
+  --width-app: 1200px;
+  --scale-app: 1.05;
 }
 
 ::-webkit-scrollbar {
@@ -53,7 +64,7 @@
   border-radius: 5px;
 }
 
-.text-app {
+.app-text {
   color: var(--text-color-app)
 }
 
@@ -65,14 +76,37 @@
   color: var(--content-color-app);
 }
 
+.app-sub-content {
+  color: var(--sub-content-color-app);
+}
+
+.app-box-shadow {
+  box-shadow: var(--app-shadows-block);
+}
+
+.app-border-radius {
+  border-radius: var(--app-border-radius);
+}
+
+.font-10 {font-size: 10px;}
+.font-11 {font-size: 11px;}
+.font-12 {font-size: 12px;}
+.font-13 {font-size: 13px;}
+.font-14 {font-size: 14px;}
+.font-15 {font-size: 15px;}
+.font-16 {font-size: 16px;}
+.font-17 {font-size: 17px;}
+.font-18 {font-size: 18px;}
+.font-19 {font-size: 19px;}
+.font-20 {font-size: 20px;}
+
 .app-btn {
   position: relative;
   overflow: hidden;
   background-color: var(--blue-color-app);
-  //background: linear-gradient(90deg, var(--blue-color-app) 0%, var(--yellow-color-app) 100%);
   color: var(--light-color-app);
   border: none;
-  border-radius: 32px;
+  border-radius: var(--app-border-radius-round);
   font-size: 16px;
   cursor: pointer;
   outline: none;
@@ -98,6 +132,119 @@
   opacity: 1;
   pointer-events: none;
   animation: ripple-animation var(--ripple-duration) linear forwards;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+.wrap-content {
+  max-width: 1200px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 10px 0;
+}
+
+.banner-app {
+  max-width: 1200px; // Chiều rộng tối đa của banner
+  margin: 0 auto; // Căn giữa banner
+  background: linear-gradient(to right, #225b8a, #021557); // Gradient màu xanh
+  border-radius: var(--app-border-radius); // Bo tròn góc
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3); // Đổ bóng nhẹ
+  position: relative; // Để các hiệu ứng lớp phủ
+  overflow: hidden; // Đảm bảo nội dung không tràn ra ngoài các góc bo tròn
+
+  // Hiệu ứng hình học giống như trong ảnh
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1); // Lớp phủ trắng trong suốt
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 40%;
+    transform: rotate(30deg);
+    opacity: 0.6;
+  }
+
+  &::after {
+    bottom: -50%;
+    right: -50%;
+    width: 180%;
+    height: 180%;
+    border-radius: 45%;
+    transform: rotate(-20deg);
+    opacity: 0.4;
+  }
+}
+
+.content {
+  position: relative; // Đảm bảo nội dung nằm trên các lớp phủ
+  z-index: 1;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+}
+
+.free-trial-button {
+  background: linear-gradient(to right, #225b8a, #021557); // Gradient cho nút
+  border: 2px solid #e0f7fa; // Viền trắng nhẹ
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 191, 255, 0.4); // Đổ bóng cho nút
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.6);
+    background: linear-gradient(to right, #225b8a, #021557); // Thay đổi gradient khi hover
+  }
+
+  // Hiệu ứng sáng bóng trên nút khi hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-30deg);
+    transition: all 0.7s ease;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
 }
 
 @keyframes ripple-animation {
@@ -139,7 +286,7 @@
 @keyframes slide-in-left {
   0% {
     opacity: 0;
-    transform: translateX(-100px) scale(0.5);
+    transform: translateX(-100px) scale(var(--scale-app));
   }
   100% {
     opacity: 1;
@@ -150,7 +297,7 @@
 @keyframes slide-in-right {
   0% {
     opacity: 0;
-    transform: translateX(100px) scale(0.5);
+    transform: translateX(100px) scale(var(--scale-app));
   }
   100% {
     opacity: 1;
@@ -184,7 +331,7 @@
   }
 
   50% {
-    transform: scale(1.05);
+    transform: scale(var(--scale-app));
   }
 
   100% {

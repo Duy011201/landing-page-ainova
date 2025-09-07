@@ -1,5 +1,3 @@
-import { TablePriceComponent } from '@app/page/table-price/table-price';
-
 export const SETTING = {
   SYSTEM_PAGE: {
     // TODO: Url for related system pages
@@ -12,7 +10,7 @@ export const SETTING = {
     RELATED_HOME: '',
     RELATED_SOLUTION: 'solution',
     RELATED_PRODUCT: 'product',
-    RELATED_TABLE_PRICE: 'table-price',
+    RELATED_TABLE_PRICE_TUHA: 'table-price-tuha',
     RELATED_CONTACT: 'contact',
     RELATED_ROOT: '',
   },
@@ -37,5 +35,13 @@ export const SETTING = {
     FORM_PASSWORD_NUMBER: 'Mật khẩu phải có ít nhất 1 số!',
     FORM_PASSWORD_SYMBOL: 'Mật khẩu phải có ít nhất 1 ký tự đặc biệt!',
     FORM_PASSWORD_CONFIRM_LENGTH: 'Mật khẩu xác nhận không hợp lệ!',
-  }
+  },
+  TOAST_MESSAGE: {
+    SUCCESS: 'success',
+    INFO: 'info',
+    WARN: 'warn',
+    ERROR: 'error',
+    SECONDARY: 'secondary',
+    CONTRAST: 'contrast',
+  },
 };

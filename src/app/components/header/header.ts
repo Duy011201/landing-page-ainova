@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { SharedModule } from '@app/core/module/share.module';
 import { RouterLink } from '@angular/router';
+import { SETTING } from '@app/core/config/setting.config';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +18,7 @@ export class HeaderComponent {
     { label: 'Về chúng tôi', icon: 'fa-solid fa-house', routerLink: '/home' },
     { label: 'Sản phẩm', icon: 'fa-solid fa-gear', routerLink: '/product' },
     { label: 'Giải pháp', icon: 'fa-solid fa-lightbulb', routerLink: '/solution' },
-    { label: 'Bảng giá', icon: 'fa-solid fa-table', routerLink: '/table-price' },
+    { label: 'Bảng giá', icon: 'fa-solid fa-table', routerLink: '/table-price-tuha' },
     { label: 'Liên hệ', icon: 'fa-solid fa-paper-plane', routerLink: '/contact' }
   ];
 
@@ -70,4 +71,6 @@ export class HeaderComponent {
       ripple.remove();
     });
   }
+
+  protected readonly SETTING = SETTING;
 }

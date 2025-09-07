@@ -1,25 +1,14 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { OnDestroy, Directive, Component } from '@angular/core';
 import { SharedModule } from '@app/core/module/share.module';
-import { QuestionComponent } from '@app/core/component/question/question.component';
-import { Router } from '@angular/router';
-import { SETTING } from '@app/core/config/setting.config';
-import { FlatformComponent } from "@app/core/component/flatform/flatform.component";
-import { TestimonialComponent } from "@app/core/component/testimonial/testimonial.component";
 
 @Component({
-  selector: 'app-product',
-  imports: [SharedModule, QuestionComponent, FlatformComponent, TestimonialComponent],
-  templateUrl: './product.html',
-  styleUrl: './product.scss',
-  encapsulation: ViewEncapsulation.None,
+  selector: 'app-schedule-consultation',
+  standalone: true,
+  imports: [SharedModule],
+  templateUrl: './schedule-consultation.component.html',
+  styleUrl: './schedule-consultation.component.scss'
 })
-export class ProductComponent {
-  isSelect: boolean = true;
-  protected readonly SETTING = SETTING;
-
-  constructor(protected _router: Router) {
-
-  }
+export class ScheduleConsultationComponent {
 
   onRippleButtonClick(event: MouseEvent): void {
     const button = event.currentTarget as HTMLElement;
@@ -48,9 +37,5 @@ export class ProductComponent {
     ripple.addEventListener('animationend', () => {
       ripple.remove();
     });
-  }
-
-  goToPage(url: string): void {
-    this._router.navigate(['/' + url]);
   }
 }

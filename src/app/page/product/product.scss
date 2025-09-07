@@ -3,7 +3,7 @@ $background-color: #f0f7ff;
 $card-background: #ffffff;
 $text-color-primary: #333;
 $text-color-secondary: #555;
-$card-border-radius: 20px;
+$card-border-radius: 16px;
 $card-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 $card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
 
@@ -35,7 +35,6 @@ $background-color: #f4f7fa;
 $card-background: #ffffff;
 $text-color-primary: #1a202c;
 $text-color-secondary: #4a5568;
-$card-border-radius: 16px;
 $card-border: 1px solid #e2e8f0;
 $card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 $card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -58,7 +57,6 @@ $font-family: 'Roboto', sans-serif;
 $background-color: #f8f9fa;
 $card-background: #ffffff;
 $text-color: #555;
-$card-border-radius: 20px;
 $card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 
 $color-orange: #f39c12;
@@ -69,38 +67,12 @@ $color-purple: #9b59b6;
 $color-teal: #1abc9c;
 
 .product__card {
-  background: url("/assets/image/logo-bg-product.png");
-  background-repeat: no-repeat;
-  height: 100%;
-  //background: linear-gradient(180deg, var(--sky-color-app) 0%, var(--light-color-app) 100%);
 
   &--select {
-    height: 200px;
     width: 100%;
-  }
-
-  .custom-button-container {
-    background-color: var(--light-color-app);
-    display: inline-flex;
-    align-items: center;
-    border-radius: 999px;
-    padding: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  .ai-agent-button {
-    padding: 12px 28px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--blue-color-app), #e0c3fc);
+    height: 600px;
+    background: url(/assets/image/bg-product.png) no-repeat center bottom;
+    background-size: cover; /* Ảnh phủ full màn hình, cắt phần thừa */
   }
 
   .features-container {
@@ -174,63 +146,135 @@ $color-teal: #1abc9c;
       border: none;
       color: white;
       padding: 12px 35px;
-      border-radius: 50px;
+      border-radius: var(--app-border-radius-round);
       font-size: 16px;
       font-weight: 500;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease;
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(var(--scale-app));
       }
     }
 
     &--marketing {
-      .card__icon-wrapper { background: $color-marketing-light; color: $color-marketing; }
-      .card__features li::before { color: $color-marketing; }
-      .card__button { background: $color-marketing; }
+      .card__icon-wrapper {
+        background: $color-marketing-light;
+        color: $color-marketing;
+      }
+
+      .card__features li::before {
+        color: $color-marketing;
+      }
+
+      .card__button {
+        background: $color-marketing;
+      }
     }
 
     &--sales {
-      .card__icon-wrapper { background: $color-sales-light; color: $color-sales; }
-      .card__features li::before { color: $color-sales; }
-      .card__button { background: $color-sales; }
+      .card__icon-wrapper {
+        background: $color-sales-light;
+        color: $color-sales;
+      }
+
+      .card__features li::before {
+        color: $color-sales;
+      }
+
+      .card__button {
+        background: $color-sales;
+      }
     }
 
     &--accounting {
-      .card__icon-wrapper { background: $color-accounting-light; color: $color-accounting; }
-      .card__features li::before { color: $color-accounting; }
-      .card__button { background: $color-accounting; }
+      .card__icon-wrapper {
+        background: $color-accounting-light;
+        color: $color-accounting;
+      }
+
+      .card__features li::before {
+        color: $color-accounting;
+      }
+
+      .card__button {
+        background: $color-accounting;
+      }
     }
 
     &--customer-care {
-      .card__icon-wrapper { background: $color-customer-care-light; color: $color-customer-care; }
-      .card__features li::before { color: $color-customer-care; }
-      .card__button { background: $color-customer-care; }
+      .card__icon-wrapper {
+        background: $color-customer-care-light;
+        color: $color-customer-care;
+      }
+
+      .card__features li::before {
+        color: $color-customer-care;
+      }
+
+      .card__button {
+        background: $color-customer-care;
+      }
     }
 
     &--platform-connect {
-      .card__icon-wrapper { background: $color-platform-light; color: $color-platform; }
-      .card__features li::before { color: $color-platform; }
-      .card__button { background: $color-platform; }
+      .card__icon-wrapper {
+        background: $color-platform-light;
+        color: $color-platform;
+      }
+
+      .card__features li::before {
+        color: $color-platform;
+      }
+
+      .card__button {
+        background: $color-platform;
+      }
     }
 
     &--reporting {
-      .card__icon-wrapper { background: $color-reporting-light; color: $color-reporting; }
-      .card__features li::before { color: $color-reporting; }
-      .card__button { background: $color-reporting; }
+      .card__icon-wrapper {
+        background: $color-reporting-light;
+        color: $color-reporting;
+      }
+
+      .card__features li::before {
+        color: $color-reporting;
+      }
+
+      .card__button {
+        background: $color-reporting;
+      }
     }
 
     &--shipping {
-      .card__icon-wrapper { background: $color-shipping-light; color: $color-shipping; }
-      .card__features li::before { color: $color-shipping; }
-      .card__button { background: $color-shipping; }
+      .card__icon-wrapper {
+        background: $color-shipping-light;
+        color: $color-shipping;
+      }
+
+      .card__features li::before {
+        color: $color-shipping;
+      }
+
+      .card__button {
+        background: $color-shipping;
+      }
     }
 
     &--inventory {
-      .card__icon-wrapper { background: $color-inventory-light; color: $color-inventory; }
-      .card__features li::before { color: $color-inventory; }
-      .card__button { background: $color-inventory; }
+      .card__icon-wrapper {
+        background: $color-inventory-light;
+        color: $color-inventory;
+      }
+
+      .card__features li::before {
+        color: $color-inventory;
+      }
+
+      .card__button {
+        background: $color-inventory;
+      }
     }
   }
 
@@ -244,7 +288,7 @@ $color-teal: #1abc9c;
 
   .card-alt {
     background: $card-background;
-    border-radius: 16px;
+    border-radius: var(--app-border-radius);
     box-shadow: $card-shadow;
     padding: 25px;
     flex: 1 1 500px;
@@ -303,23 +347,43 @@ $color-teal: #1abc9c;
     }
 
     &--messaging {
-      .card-alt__icon { color: $color-messaging; }
-      .card-alt__features li::before { color: $color-messaging; }
+      .card-alt__icon {
+        color: $color-messaging;
+      }
+
+      .card-alt__features li::before {
+        color: $color-messaging;
+      }
     }
 
     &--auto-reply {
-      .card-alt__icon { color: $color-auto-reply; }
-      .card-alt__features li::before { color: $color-auto-reply; }
+      .card-alt__icon {
+        color: $color-auto-reply;
+      }
+
+      .card-alt__features li::before {
+        color: $color-auto-reply;
+      }
     }
 
     &--status-update {
-      .card-alt__icon { color: $color-status-update; }
-      .card-alt__features li::before { color: $color-status-update; }
+      .card-alt__icon {
+        color: $color-status-update;
+      }
+
+      .card-alt__features li::before {
+        color: $color-status-update;
+      }
     }
 
     &--filtering {
-      .card-alt__icon { color: $color-filtering; }
-      .card-alt__features li::before { color: $color-filtering; }
+      .card-alt__icon {
+        color: $color-filtering;
+      }
+
+      .card-alt__features li::before {
+        color: $color-filtering;
+      }
     }
   }
 
@@ -401,28 +465,87 @@ $color-teal: #1abc9c;
     }
 
     &--customer-management {
-      .card-crm__icon-wrapper { background: $color-qlkh-light; i { color: $color-qlkh; }}
-      .card-crm__list li::before { color: $color-qlkh; }
+      .card-crm__icon-wrapper {
+        background: $color-qlkh-light;
+
+        i {
+          color: $color-qlkh;
+        }
+      }
+
+      .card-crm__list li::before {
+        color: $color-qlkh;
+      }
     }
+
     &--order-management {
-      .card-crm__icon-wrapper { background: $color-qldh-light; i { color: $color-qldh; }}
-      .card-crm__list li::before { color: $color-qldh; }
+      .card-crm__icon-wrapper {
+        background: $color-qldh-light;
+
+        i {
+          color: $color-qldh;
+        }
+      }
+
+      .card-crm__list li::before {
+        color: $color-qldh;
+      }
     }
+
     &--sms {
-      .card-crm__icon-wrapper { background: $color-sms-light; i { color: $color-sms; }}
-      .card-crm__list li::before { color: $color-sms; }
+      .card-crm__icon-wrapper {
+        background: $color-sms-light;
+
+        i {
+          color: $color-sms;
+        }
+      }
+
+      .card-crm__list li::before {
+        color: $color-sms;
+      }
     }
+
     &--zns {
-      .card-crm__icon-wrapper { background: $color-zns-light; i { color: $color-zns; }}
-      .card-crm__list li::before { color: $color-zns; }
+      .card-crm__icon-wrapper {
+        background: $color-zns-light;
+
+        i {
+          color: $color-zns;
+        }
+      }
+
+      .card-crm__list li::before {
+        color: $color-zns;
+      }
     }
+
     &--reporting {
-      .card-crm__icon-wrapper { background: $color-report-light; i { color: $color-report; }}
-      .card-crm__list li::before { color: $color-report; }
+      .card-crm__icon-wrapper {
+        background: $color-report-light;
+
+        i {
+          color: $color-report;
+        }
+      }
+
+      .card-crm__list li::before {
+        color: $color-report;
+      }
     }
+
     &--permission {
-      .card-crm__icon-wrapper { background: $color-permission-light; i { color: $color-permission; }}
-      .card-crm__list li::before { color: $color-permission; }
+      .card-crm__icon-wrapper {
+        background: $color-permission-light;
+
+        i {
+          color: $color-permission;
+        }
+      }
+
+      .card-crm__list li::before {
+        color: $color-permission;
+      }
     }
   }
 
@@ -456,7 +579,7 @@ $color-teal: #1abc9c;
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      border-radius: 12px;
+      border-radius: var(--app-border-radius);
       transition: color 0.3s ease;
       background-color: var(--light-color-app);
 
@@ -470,14 +593,14 @@ $color-teal: #1abc9c;
         background: linear-gradient(to top left, #8ec5fc, #e0c3fc);
         z-index: 0;
         transition: height 0.4s ease-in-out;
-        border-radius: 12px;
+        border-radius: var(--app-border-radius);
       }
 
       &:hover::before {
         height: 100%;
       }
 
-      > * {
+      >* {
         position: relative;
         z-index: 1;
         transition: color 0.3s ease;
@@ -497,4 +620,3 @@ $color-teal: #1abc9c;
     }
   }
 }
-

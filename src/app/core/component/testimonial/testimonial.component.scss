@@ -1,0 +1,14 @@
+:host ::ng-deep .p-carousel .p-carousel-item {
+  padding: 0.7rem;
+}
+
+.testimonial {
+  background-image: linear-gradient(180deg, #fff, #e9f4ff);
+
+  &--card {
+    box-sizing: border-box;
+    background: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}

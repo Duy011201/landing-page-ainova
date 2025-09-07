@@ -1,0 +1,32 @@
+.flatform {
+
+  .item {
+    &:hover {
+      transform: scale(var(--scale-app));
+    }
+  }
+
+  &--train {
+    background-image: linear-gradient(180deg, #fffdf8, var(--orange-color-light-app));
+
+    &:hover {
+      box-shadow: 0 5px 15px var(--orange-color-light-app);
+    }
+  }
+
+  &--software {
+    background-image: linear-gradient(180deg, #f9fbff, var(--sky-color-light-app));
+
+    &:hover {
+      box-shadow: 0 5px 15px var(--sky-color-light-app);
+    }
+  }
+
+  &--robot {
+    background-image: linear-gradient(180deg, #f9fbff, var(--purple-color-light-app));
+
+    &:hover {
+      box-shadow: 0 5px 15px var(--purple-color-light-app);
+    }
+  }
+}

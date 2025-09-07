@@ -50,6 +50,7 @@
   transition: box-shadow 0.15s linear, background-color 0.3s;
   background-color: var(--blue-color-app);
   color: var(--light-color-app);
+  //color: var(--blue-color-app);
   position: relative;
 
   .banner-title {
@@ -92,7 +93,7 @@
     object-fit: contain;
     width: 100px;
     height: 82px;
-    transform: scale(2)
+    transform: scale(var(--scale-app))
   }
 
   &--item {

@@ -7,11 +7,11 @@
   &--center {
     position: relative;
     font-family: Inter, sans-serif;
-    height: 712px;
+    height: 830px;
     color: var(--light-color-app);
     //background-size: 100% 100%;
     //background-image: linear-gradient(180deg, #ffece1, #fff);
-    background-image: url('/assets/image/bg-sean-pollock.jpg');
+    background-image: url('/assets/image/bg-home-1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
     }
 
     .try-product {
-      border-radius: 40px;
+      border-radius: var(--app-border-radius-round);
       animation: pulse-scale 2s ease-in-out infinite;
     }
 
@@ -75,12 +75,12 @@
 
     .support {
       background-color: var(--light-color-app);
-      border-radius: 30px;
+      border-radius: var(--app-border-radius);
       transition: transform 0.5s ease;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(var(--scale-app));
 
         .view-detail {
           color: var(--light-color-app);
@@ -127,7 +127,7 @@
       position: relative;
       overflow: hidden;
       height: 618px;
-      border-radius: 16px;
+      border-radius: var(--app-border-radius);
       width: 100%;
 
       img {
@@ -151,7 +151,7 @@
         transform: translateY(100%);
         transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s;
         z-index: 1;
-        border-radius: 16px;
+        border-radius: var(--app-border-radius);
       }
 
       .content {
@@ -190,7 +190,7 @@
     .item {
       img {
         width: 150px;
-        height: 70px;
+        height: 90px;
 
         will-change: filter, transform;
         filter: grayscale(100%);
@@ -198,7 +198,7 @@
 
         &:hover {
           filter: grayscale(0%);
-          transform: scale(1.3);
+          transform: scale(var(--scale-app));
         }
       }
     }
@@ -206,16 +206,15 @@
 
   &--question {
     .item {
+      transition: transform 0.3s ease-in-out;
+
       img {
-        width: 60px;
-        height: 50px;
-        transition: transform 0.3s ease-in-out;
+        width: 40px;
+        height: 40px;
       }
 
       &:hover {
-        img {
-          transform: scale(1.12);
-        }
+        transform: scale(var(--scale-app));
       }
     }
   }
@@ -246,11 +245,11 @@
     }
 
     .item {
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      box-shadow: var(--app-shadows-block);
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      border-radius: 12px;
+      border-radius: var(--app-border-radius);
       transition: color 0.3s ease;
 
       &::before {
@@ -263,7 +262,7 @@
         background: linear-gradient(to top left, #8ec5fc, #e0c3fc);
         z-index: 0;
         transition: height 0.4s ease-in-out;
-        border-radius: 12px;
+        border-radius: var(--app-border-radius);
       }
 
       &:hover::before {
@@ -297,7 +296,7 @@
     }
 
     .item {
-      border-radius: 8px;
+      border-radius: var(--app-border-radius);
       padding: 16px;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }

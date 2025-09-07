@@ -1,0 +1,27 @@
+.schedule-consultation {
+  position: relative;
+  background-size: 100% 100%;
+  font-family: Inter, sans-serif;
+  color: var(--dark-color-app);
+  height: 250px;
+  border-bottom: 1px solid var(--border-color-app);
+  background: radial-gradient(circle, #ffd9c8, #eee1ef);
+
+  .schedule-consultation-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  .gradient-text {
+    background: -webkit-linear-gradient(right, rgb(0, 116, 255), rgb(255, 62, 249)) text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
