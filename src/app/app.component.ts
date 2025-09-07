@@ -7,7 +7,6 @@ import { PrimeNG } from 'primeng/config';
 import { FooterComponent } from '@app/components/footer/footer';
 import { HeaderComponent } from '@app/components/header/header';
 import { ButtonContactComponent } from '@app/components/button-contact/button-contact';
-import { register } from 'swiper/element/bundle';
 
 @Component({
   selector: 'app-root',
@@ -42,6 +41,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.primeNG.ripple.set(true);
-    register();
   }
 }
