@@ -34,7 +34,7 @@ export class TestimonialComponent {
       companyLogo: 'https://assets.filum.ai/image_222_5f9a7d1244.png',
       companyName: 'Gohub',
       caption:
-        'Trong các phần mềm hỗ trợ bán hàng trên Facebook mình thấy AiNova tiện lợi nhất, báo cáo, quản trị fanpage, chia số cho nhân viên sales cũng dễ, công bằng. Với 1 người quản lý thì quá tiện lợi.',
+        'Trong các phần mềm hỗ trợ bán hàng trên Facebook mình thấy AINOVA tiện lợi nhất, báo cáo, quản trị fanpage, chia số cho nhân viên sales cũng dễ, công bằng. Với 1 người quản lý thì quá tiện lợi.',
       CEOPosition: 'Co-Founder & Head of Growth',
     },
     {
@@ -52,7 +52,7 @@ export class TestimonialComponent {
       companyLogo: 'https://assets.filum.ai/Huythanh_1_1dc5f86c4f.png',
       companyName: 'Huy Thanh Jewelry',
       caption:
-        'Trước việc chia số, trùng số và xác định số nào hiệu quả từ chiến dịch nào ... là một việc không thể với chúng tôi. Áp dụng AiNova vào doanh nghiệp giúp tôi tối ưu hóa đươc data và các chiến dịch quảng cáo. Đội ngũ chăm sóc khách hàng cũng tuyệt vời cảm ơn các bạn.',
+        'Trước việc chia số, trùng số và xác định số nào hiệu quả từ chiến dịch nào ... là một việc không thể với chúng tôi. Áp dụng AINOVA vào doanh nghiệp giúp tôi tối ưu hóa đươc data và các chiến dịch quảng cáo. Đội ngũ chăm sóc khách hàng cũng tuyệt vời cảm ơn các bạn.',
       CEOPosition: 'Quản lý',
     },
     {
