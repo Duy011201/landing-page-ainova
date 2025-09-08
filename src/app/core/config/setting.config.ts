@@ -10,7 +10,7 @@ export const SETTING = {
     RELATED_HOME: '',
     RELATED_SOLUTION: 'solution',
     RELATED_PRODUCT: 'product',
-    RELATED_TABLE_PRICE_TUHA: 'table-price-tuha',
+    RELATED_TABLE_PRICE_TUHA: 'table-price',
     RELATED_CONTACT: 'contact',
     RELATED_ROOT: '',
   },
